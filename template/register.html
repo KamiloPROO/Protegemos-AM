@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Protegemos C.G.U | Registro</title>
+    <link rel="stylesheet" href="./assets/ccs/styleRegistro.css"></link>
+    <link rel="stylesheet" href="./assets/css/cargandoo.css">
+     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- copiar esto en todos los html -->
+     
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js" integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+<body>
+    <form action="" method="POST" id="form">
+        <div class="form">
+            <img src="./assets/img/logowhite_1.png" width="120" alt="">
+            <h3>REGISTRO</h3>
+            <div class="grupo">
+                <input type="text" name="" id="Nombre" required><span class="barra"></span>
+                <label for="">Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="" id="Apellido" required><span class="barra"></span>
+                <label for="">Apellido</label>
+            </div>
+            <div class="grupo">
+                <select class="controls" id="selectTipDocument" name="selectCategorias">
+                    <option>Seleccione Un tipo de documento...</option>
+                    <option>Tarjeta de Identidad</option>
+                    <option>Cedula de Ciudadania</option>
+                    <option>Pasaporte</option>
+                  </select>
+            </div>
+            
+            <div class="grupo">
+                <input type="number" name="" id="DocumentoRegistro" required><span class="barra"></span>
+                <label for="">No Documento</label>
+            </div>
+            <div class="grupo">
+                <input type="number" name="" id="Celular" required><span class="barra"></span>
+                <label for="">Celular</label>
+            </div>
+            <div class="grupo">
+                <input type="text" name="" id="Correo" required><span class="barra"></span>
+                <label for="">Correo</label>
+            </div>
+            <button class="hovere" type="button"id="buttonRegistrarse">Suscribirte</button>
+        </div>
+        <div class="input-group">
+            <p><a href="login.html" class="iniMelo">Iniciar Sesión</a> </p>
+        </div>
+    </form>
+
+    <div id="cargando">
+        <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json" 
+        background="transparent" 
+        speed="1" 
+        loop 
+        autoplay>
+        </lottie-player>
+    </div>
+
+    <script src="main.js"></script>
+
+    <!-- estos tambien -->
+    
+    <script src="./Logica/Routes/routes.js"></script>
+
+   
+    <script src="./Logica/Register/HttpsRegisterUser.js"></script>
+    <script src="./Logica/Register/RegisterUserBussiness.js"></script>
+    <script src="./Logica/Register/RegisterUserController.js"></script>
+    <script src="./Logica/Register/RegisterUserEvents.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+body,html {
+   height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #3f76ff; 
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f76ff, #3f76ff);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1eb858, #3abf01); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.registro{ 
+    color: #f9f8f8;
+    /* border: 2px solid #f5f5f7; */
+    padding: 24px 5px;
+    border-radius: 10%;
+    border: 0%;
+}
+
+.registro:hover{
+
+    color: #07369bbb;
+
+}
+
+.inicio{
+    align-items: center;
+    border-radius: 20px;
+    border: 0;
+    width: 140px;
+    height: 40px;
+    color: #083eb3bb;
+    font-size: 100%;
+}
+
+.inicio:hover{
+
+transition: 0.6s;
+ background-color: #07369bbb;
+ color: #fff;
+ border: 2px solid #fff
+
+}
+
+.form-box{
+    
+    width: 300px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    box-shadow: 0 0 6px 0 rgb(250, 250, 246);
+    text-align: center;
+   
+}
+.form-title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box button[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 10px;
+    text-align: center;
+    border: 2px solid #f5f5f7;
+    background: white;
+    width: 250px;
+    outline: none;
+    color: rgb(10, 10, 10);
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 80%;
+}
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus{
+    width: 280px;
+    border-color: #ffff;
+}
+.form-box button[type="submit"]{
+    border: 0;
+    background: linear-gradient(to right, #b83c03, #ba0548);
+    cursor: pointer;
+    border: 2px solid #ffff;
+}
+.form-box button[type="submit"]:hover{
+    background: none;
+}

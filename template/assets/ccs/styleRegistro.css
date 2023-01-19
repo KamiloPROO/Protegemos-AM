@@ -1,0 +1,167 @@
+:root{
+    --colorTextos: #faf8f867; 
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+    background: #ffff; 
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a774d, #3abf01);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a774d, #3abf01); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-weight: 500;
+
+}
+form{
+    background: rgb(0, 0, 0,0.65);
+    padding: 4px 0;
+    box-shadow: 0 0 6px 0 rgb(250, 250, 246);
+    border-radius: 20px;
+    width: 400px;
+    height:auto;
+}
+.form{
+    width: 100%;
+    margin: auto;
+}
+p{
+    text-align: center; 
+}
+a{
+    color: #fff;  
+}
+h3{
+    text-align: center;
+    color: #fff;
+    margin-top: 5%;
+}
+img{
+ margin-left: 25%;
+ height: 80px;
+}
+form .grupo{
+    position: relative;
+    margin: 40px;
+}
+
+.controls {
+    width: 100%;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #636060;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(114, 112, 112);
+  }
+
+.hovere:hover{
+    transition: 0.7s;
+        background-color: #07369bbb;
+        color: #fff;
+        border: 2px solid #fff; 
+}
+
+.iniMelo:hover{
+    
+    transition: 0.7s;
+    color: #385594bb;
+
+}
+
+input{
+    background: none;
+    color: #f5efef;
+    font-size: 14px;
+    padding: 4px 5px 5px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+    
+}
+input:focus{
+    outline: none;
+    color: #fcfafa;
+    font-size: 100%;
+}
+label{
+    color: var(--colorTextos);
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+input:focus~label,
+input:valid~label{
+    top: -12px;
+    font-size: 16px;
+    color: #f1f3f4;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #1505e9, #1505e9);  
+    transition: 0.3 ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+
+}
+button{
+    font-family: 'roboto';
+    background: #1505e9; 
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f85a12, #F70761);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #f85a12, #F70761);  */
+    background-color:#fff;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    color: #1505e9;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #1505e9;
+}
+input-group{
+    color: #fff;
+}
+
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+    
+}
