@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Protegemos C.G.U | Afiliar un Usuario</title>
+    <!--Material Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./assets/css/styleDash.css">
+    <link rel="stylesheet" href="./assets/css/menuStyle.css">
+    <link rel="stylesheet" href="./assets/css/compraventa.css">
+    <link rel="stylesheet" href="./assets/css/cargandoo.css">
+    <link rel="stylesheet" href="./assets/css/respoDash.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"
+        integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+
+<body class="cuerpo">
+
+    <div>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <br>
+                        <img src="./assets/img/logodash.png" style="height: 130px; margin-top: -5px;">
+
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close </span>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <br>
+                    <a href="#"><span class="material-icons-sharp">
+                        meeting_room</span>
+                        <h3>Sedes</h3>
+                    </a>
+
+                    <a href="#"><span class="material-icons-sharp">
+                        local_atm</span>
+                        <h3>Tarifas</h3>
+                    </a>
+
+                    <a href="afiliarUsuario.html" ><span class="material-icons-sharp">
+                        person_3</span>
+                        <h3>Afiliar Usuario</h3>
+                    </a>
+
+                    <a href="afiliarpersonal.html" class="active"><span class="material-icons-sharp">
+                        people</span>
+                        <h3>Afiliar Personal</h3>
+                    </a>
+
+                    <a href="afiliarMedico.html"><span class="material-icons-sharp">
+                        medication_liquid</span>
+                        <h3>Afiliar Médico</h3>
+                    </a>
+
+                    <a href="micuenta.html"><span class="material-icons-sharp">
+                            person_outline</span>
+                        <h3>Cuenta</h3>
+                    </a>
+
+
+            </aside>
+
+            <!-----------End of Aside------------>
+
+            <div class="form-content">
+
+
+                <div class="Nav_inner">
+                    <nav>
+                        <a href="Dash.html" class="iconos"><span class="material-icons-sharp">
+                            admin_panel_settings</span>
+                            <h3 class="letrasNav">Administrador</h3>
+                        </a>
+                        <a href="inventario.html" class="iconos"><span class="material-icons-sharp">
+                            inventory</span>
+                            <h3 class="letrasNav">Inventario</h3>
+                        </a>
+                        <a href="papeleria.html" class="iconos"><span class="material-icons-sharp">
+                            feed</span>
+                            <h3 class="letrasNav">Papelería</h3>
+                        </a>
+
+                        <a href="contratos.html" class="iconos"><span class="material-icons-sharp">
+                            note_alt</span>
+                        <h3 class="letrasNav">Contratos</h3>
+                    </a>
+                    <a href="abonos.html" class="iconos"><span class="material-icons-sharp">
+                        monetization_on</span>
+                        <h3 class="letrasNav">Abonos</h3>
+                    </a>
+                    <a href="cartera.html" class="iconos"><span class="material-icons-sharp">
+                        wallet</span>
+                        <h3 class="letrasNav">Cartera</h3>
+                    </a>
+
+                    <a href="citasmedicas.html" class="iconos"><span class="material-icons-sharp">
+                        medical_information</span>
+                    <h3 class="letrasNav">Citas Médicas</h3>
+                </a>
+                <a href="reportes.html" class="iconos"><span class="material-icons-sharp">
+                    crisis_alert</span>
+                    <h3 class="letrasNav">Reportes</h3>
+                </a>
+                <a href="guiamedica.html" class="iconos"><span class="material-icons-sharp">
+                    support_agent</span>
+                    <h3 class="letrasNav">Guia Médica</h3>
+                </a>
+                <a href="consulta.html" class="iconos"><span class="material-icons-sharp">
+                    leak_add</span>
+                <h3 class="letrasNav">Consulta</h3>
+            </a>
+            <a href="qpr.html" class="iconos"><span class="material-icons-sharp">
+                adjust</span>
+                <h3 class="letrasNav">QPR</h3>
+            </a>
+
+            <a href="datosacceso.html" class="iconos"><span class="material-icons-sharp">
+                key</span>
+            <h3 class="letrasNav">Datos Acceso</h3>
+        </a>
+
+                    </nav>
+                </div>
+
+                <div style="display: flex; margin-left: 39%; margin-top: 50px; overflow: hidden">
+
+                    <!-- <div style="display: flex; margin-left: 55%;">
+                        <h1 id="name" style="margin-left: 0px; font-size: 20px; color: #d79d13; width: 100%; height: 28px; overflow: hidden;">Jua</h1>
+                    </div> -->
+                </div>
+                <section class="form-register">
+                    <h4>Afiliar Personal</h4>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block;">
+                            <b>Código</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block;">
+                            <b>Cargo</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+
+
+                    <div>
+                        <b>N° Cédula</b>
+                        <input class="controls" type="text" name="nom" id="nomComercio" required>
+
+                    </div>
+                  
+                    <div>
+                        <b>Fecha Expedición</b>
+                        <input class="controls" type="text" name="nom" id="nomComercio" required>
+                    </div>
+
+                    <div>
+                        <b>Nombre Completo</b>
+                    <input class="controls" type="text" name="nom" id="nomComercio" required>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="display: block;">
+                            <b>Municipio</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                            </select>
+                           </div>
+        
+                           <div style="display: block;">
+                            <b>Barrio</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                            </select>
+                           </div>
+                    </div>
+
+                   
+
+                   <div>
+                    <b>Dirección</b>
+                    <input class="controls" type="text" name="nom" id="nomComercio" required>
+                   </div>
+
+
+                   <div style="display: flex;">
+                    <div style="display: block;">
+                        <b>Teléfono</b>
+                        <input class="controls" type="text" name="nom" id="nomComercio" required>
+                       </div>
+    
+                       <div style="display: block;">
+                        <b>Celular</b>
+                        <input class="controls" type="text" name="nom" id="nomComercio" required>
+                       </div>
+
+                   </div>
+                   
+
+
+
+                    
+
+                   
+                   
+                   
+                    
+                  
+                    <!--<b>Agrega una imagen</b>
+                    <input class="controls" type="file" name="img" id="ImgComercio" required>-->
+
+                    <button class="botons" type="button" id="agregarComercioNav"> Afiliar</button>
+                </section>
+                <!-- <section class="form-register">
+                    <h4>Categoria del comercio</h4>
+                    <select class="controls" id="selectCategorias" name="selectCategorias">
+                        <option>Seleccione Una Categoria...</option>
+                    </select>
+                    <h4>Porcentaje de Descuento</h4>
+                    <select class="controls" id="selectDescuento" name="selectCategorias">
+                        <option>Seleccione Un % descuento</option>
+                        <option>10%</option>
+                        <option>15%</option>
+                        <option>20%</option>
+                        <option>25%</option>
+                        <option>30%</option>
+                        <option>35%</option>
+                        <option>40%</option>
+                        <option>45%</option>
+                        <option>50%</option>
+                        <option>55%</option>
+                        <option>60%</option>
+                        <option>65%</option>
+                        <option>70%</option>
+                        <option>75%</option>
+                        <option>80%</option>
+                        <option>85%</option>
+                        <option>90%</option>
+                        <option>95%</option>
+                        <option>100%</option>
+                    </select>
+                    <h4>Formulario Afiliar Comercio</h4>
+                    <b>Nombre del Comercio</b>
+                    <input class="controls" type="text" name="nom" id="nomComercio" required>
+                    <b>Dirección</b>
+                    <input class="controls" type="text" name="dire" id="DireComercio" required>
+                    <b>Descripción</b>
+                    <input class="controls" type="text" name="dire" id="DireComercio" required>
+                    <b>Agrega una imagen</b>
+                    <input class="controls" type="file" name="img" id="ImgComercio" required>
+
+                    <button class="botons" type="button" id="agregarComercioNav"> REGISTRAR</button>
+                </section> -->
+
+                <div class="right">
+                    <div class="top">
+                        <button id="menu-btn">
+                            <span class="material-icons-sharp">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- <div id="cargando2">
+                    <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json"
+                        background="transparent" speed="1" loop autoplay>
+                    </lottie-player>
+                </div> -->
+
+
+            </div>
+
+            <!-- End of Main-->
+
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+
+        const ImgComercios = document.getElementById("ImgComercio");
+
+        ImgComercios.addEventListener("change", () => {
+
+            const file = ImgComercios.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+
+                const comoseria = reader.result
+                console.log(comoseria);
+                localStorage.setItem("imagenBaseNavideña", comoseria)
+
+            });
+
+            reader.readAsDataURL(file);
+
+        })
+    </script>
+
+    <script>
+
+        function membreNavideña() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+        function membreSanta() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+        function membreAliado() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+
+
+    </script>
+
+    <!-- Fondo Particles-->
+    <!-- <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/orders.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/particles.min.js"></script>-->
+
+    <!-- <script src="./assets/js/logica/utils/HttpsVerMembresias.js"></script> -->
+
+    <!-- <script src="./assets/js/logica/router/router.js"></script>
+
+
+    <script src="./assets/js/logica/utils/HttpsAgregarComercio.js"></script>
+    <script src="./assets/js/logica/business/agregarComercioBussiness.js"></script>
+    <script src="./assets/js/logica/controller/agregarComercioController.js"></script>
+    <script src="./assets/js/logica/events/agregarComercioEvents.js"></script>
+
+    <script src="./assets/js/Logica/utils/HttpsListarCatagorias.js"></script> -->
+
+</body>
+
+</html>
