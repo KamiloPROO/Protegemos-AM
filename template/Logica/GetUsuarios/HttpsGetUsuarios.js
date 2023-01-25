@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', e => {
     // console.log(namee);
   
     $.ajax({
-      type: "POST",
+      type: "GET",
       url: "http://localhost:8124/Api/getUsuarios",
       data: "",
       success: function (data) {
