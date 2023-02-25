@@ -19,7 +19,7 @@ function CallEndPointPostComercio(url, jsonArgs) {
                         
                     }).then((result) => {
                         if(result.isConfirmed){
-                            window.location.href = URL_API_BASE;
+                            // window.location.href = URL_API_BASE;
                             location.replace("dash.html");
                             location.href ="dash.html";   
                         }   
