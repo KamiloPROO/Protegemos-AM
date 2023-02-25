@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyQlub</title>
+    <!--Material Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./assets/css/styleDash.css">
+    <link rel="stylesheet" href="./assets/css/compraventa.css">
+    <link rel="stylesheet" href="./assets/css/cargandoo.css">
+    <link rel="stylesheet" href="./assets/css/respoDash.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/Logosplashsquare.png" />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"
+        integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+
+<body class="cuerpo">
+
+    <div>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <br>
+                        <img src="./assets/img/logodash.png" style="height: 200px; margin-top: -50px;">
+
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close </span>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <br>
+                    <a href="agregarBono.html" class="active"><span class="material-icons-sharp">
+                            loyalty</span>
+                        <h3>Agregar Bono</h3>
+                    </a>
+
+                    
+
+                    <a href="index.html"><span class="material-icons-sharp">
+                            logout</span>
+                        <h3>Cerrar Sesion</h3>
+                    </a>
+
+                </div>
+
+
+            </aside>
+
+            <!-----------End of Aside------------>
+
+            <div class="form-content">
+                <div style="display: flex; margin-left: 39%; overflow: hidden;">
+                    <br>
+                    <h1 id="cuentaMl" style="color: #3f76ff;">Agregar Bono</h1>
+                    <br>
+                    <!-- <div style="display: flex; margin-left: 55%;">
+                        <h1 id="name" style="margin-left: 0px; font-size: 20px; color: #d79d13; width: 100%; height: 28px; overflow: hidden;">Jua</h1>
+                    </div> -->
+                </div>
+                <section class="form-register">
+                    <h4>Categoria del comercio</h4>
+                    <select class="controls" id="selectCategorias" name="selectCategorias">
+                        <option>Seleccione Una Categoria...</option>
+                    </select>
+                    <h4>Formulario Afiliar Comercio</h4>
+                    <b>Nombre del Comercio</b>
+                    <input class="controls" type="text" name="nom" id="nomComercio" required>
+                    <b>Dirección</b>
+                    <input class="controls" type="text" name="dire" id="DireComercio" required>
+                    <b>Agrega una imagen</b>
+                    <input class="controls" type="file" name="img" id="ImgComercio" enctype="multipart/form-data"
+                        required>
+
+                    <button class="botons" type="button" id="agregarComercioAliado"> REGISTRAR</button>
+                </section>
+
+                <div class="right">
+                    <div class="top">
+                        <button id="menu-btn">
+                            <span class="material-icons-sharp">menu</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="cargando2">
+                    <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay>
+                    </lottie-player>
+                </div>
+
+
+            </div>
+
+            <!-- End of Main-->
+
+        </div>
+        
+    </div>
+
+    
+
+    <script>
+        const ImgComercios = document.getElementById("ImgComercio");
+
+        ImgComercios.addEventListener("change", () => {
+
+            const file = ImgComercios.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+
+                const comoseria = reader.result
+                console.log(comoseria);
+                localStorage.setItem("imagenBaseAliada", comoseria)
+
+            });
+
+            reader.readAsDataURL(file);
+
+        })
+    </script>
+
+
+    <script>
+
+        function membreNavideña() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+        function membreSanta() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+        function membreAliado() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+
+
+    </script>
+
+    <!-- Fondo Particles-->
+    <!-- <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/orders.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/particles.min.js"></script>-->
+
+    <!-- <script src="./assets/js/logica/utils/HttpsVerMembresias.js"></script> -->
+
+    <script src="./Logica/Routes/routes.js"></script>
+
+
+    <script src="./Logica/AgregarBono/HttpsAgregarBono.js"></script>
+    <script src="./Logica/AgregarBono/agregarBonoBussines.js"></script>
+    <script src="./Logica/AgregarBono/agregarBonoController.js"></script>
+    <script src="./Logica/AgregarBono/agregarBonoEvents.js"></script>
+
+    <script src="./Logica/AgregarBono/ListarCategoriasBono.js"></script>
+
+</body>
+
+</html>
