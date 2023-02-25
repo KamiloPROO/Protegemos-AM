@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/css/cargandoo.css">
     <link rel="stylesheet" href="./assets/css/respoDash.css">
     <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/grilla.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -40,6 +41,11 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+
 </head>
 
 <body class="cuerpo">
@@ -61,37 +67,37 @@
 
                 <div class="sidebar">
                     <br>
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="sedes.html"><span class="material-icons-sharp">
                             meeting_room</span>
                         <h3>Sedes</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="inventarios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Inventarios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="especialidades.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Especialidades</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="tarifas.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Tarifas</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="municipios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Municipios</h3>
                     </a>
 
-                    <a href="afiliarUsuario.html" ><span class="material-icons-sharp">
+                    <a href="afiliarUsuario.html"><span class="material-icons-sharp">
                             person_3</span>
                         <h3>Afiliar Aliado</h3>
                     </a>
 
-                    <a href="afiliarPersonal.html" ><span class="material-icons-sharp">
+                    <a href="afiliarPersonal.html"><span class="material-icons-sharp">
                             people</span>
                         <h3>Afiliar Personal</h3>
                     </a>
@@ -106,30 +112,30 @@
                         <h3>Ver Usuarios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="convenios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Convenios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="serviciosAdicionales.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Servicios Adicionales</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="tarifarios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Tarifarios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="Preparaciones.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Preparaciones</h3>
                     </a>
 
                     <a href="index.html"><span class="material-icons-sharp">
-                        logout</span>
-                    <h3>Logout</h3>
-                </a>
+                            logout</span>
+                        <h3>Logout</h3>
+                    </a>
                 </div>
 
 
@@ -143,56 +149,56 @@
                 <div class="Nav_inner">
                     <nav>
                         <a href="Dash.html" class="iconos"><span class="material-icons-sharp">
-                            admin_panel_settings</span>
+                                admin_panel_settings</span>
                             <h3 class="letrasNav">Administrador</h3>
                         </a>
                         <a href="inventario.html" class="iconos"><span class="material-icons-sharp">
-                            inventory</span>
+                                inventory</span>
                             <h3 class="letrasNav">Inventario</h3>
                         </a>
                         <a href="papeleria.html" class="iconos"><span class="material-icons-sharp">
-                            feed</span>
+                                feed</span>
                             <h3 class="letrasNav">Papelería</h3>
                         </a>
 
                         <a href="contratos.html" class="iconos"><span class="material-icons-sharp">
-                            note_alt</span>
-                        <h3 class="letrasNav">Contratos</h3>
-                    </a>
-                    <a href="abonos.html" class="iconos"><span class="material-icons-sharp">
-                        monetization_on</span>
-                        <h3 class="letrasNav">Abonos</h3>
-                    </a>
-                    <a href="cartera.html" class="iconos"><span class="material-icons-sharp">
-                        wallet</span>
-                        <h3 class="letrasNav">Cartera</h3>
-                    </a>
+                                note_alt</span>
+                            <h3 class="letrasNav">Contratos</h3>
+                        </a>
+                        <a href="abonos.html" class="iconos"><span class="material-icons-sharp">
+                                monetization_on</span>
+                            <h3 class="letrasNav">Abonos</h3>
+                        </a>
+                        <a href="cartera.html" class="iconos"><span class="material-icons-sharp">
+                                wallet</span>
+                            <h3 class="letrasNav">Cartera</h3>
+                        </a>
 
-                    <a href="citasmedicas.html" class="iconos"><span class="material-icons-sharp">
-                        medical_information</span>
-                    <h3 class="letrasNav">Citas Médicas</h3>
-                </a>
-                <a href="reportes.html" class="iconos"><span class="material-icons-sharp">
-                    crisis_alert</span>
-                    <h3 class="letrasNav">Reportes</h3>
-                </a>
-                <a href="guiamedica.html" class="iconos"><span class="material-icons-sharp">
-                    support_agent</span>
-                    <h3 class="letrasNav">Guia Médica</h3>
-                </a>
-                <a href="consulta.html" class="iconos"><span class="material-icons-sharp">
-                    leak_add</span>
-                <h3 class="letrasNav">Consulta</h3>
-            </a>
-            <a href="qpr.html" class="iconos"><span class="material-icons-sharp">
-                adjust</span>
-                <h3 class="letrasNav">QPR</h3>
-            </a>
+                        <a href="citasmedicas.html" class="iconos"><span class="material-icons-sharp">
+                                medical_information</span>
+                            <h3 class="letrasNav">Citas Médicas</h3>
+                        </a>
+                        <a href="reportes.html" class="iconos"><span class="material-icons-sharp">
+                                crisis_alert</span>
+                            <h3 class="letrasNav">Reportes</h3>
+                        </a>
+                        <a href="guiamedica.html" class="iconos"><span class="material-icons-sharp">
+                                support_agent</span>
+                            <h3 class="letrasNav">Guia Médica</h3>
+                        </a>
+                        <a href="consulta.html" class="iconos"><span class="material-icons-sharp">
+                                leak_add</span>
+                            <h3 class="letrasNav">Consulta</h3>
+                        </a>
+                        <a href="qpr.html" class="iconos"><span class="material-icons-sharp">
+                                adjust</span>
+                            <h3 class="letrasNav">QPR</h3>
+                        </a>
 
-            <a href="datosacceso.html" class="iconos"><span class="material-icons-sharp">
-                key</span>
-            <h3 class="letrasNav">Datos Acceso</h3>
-        </a>
+                        <a href="datosacceso.html" class="iconos"><span class="material-icons-sharp">
+                                key</span>
+                            <h3 class="letrasNav">Datos Acceso</h3>
+                        </a>
 
                     </nav>
                 </div>
@@ -209,7 +215,7 @@
                     <div style="display: flex;">
 
                         <div style="display: block; margin-left: 10%;">
-                            <b>Código</b>
+                            <b>Municipio</b>
                             <input class="controls" type="text" name="nom" id="nomComercio" required>
                         </div>
 
@@ -217,120 +223,159 @@
                             <b>Cargo</b>
                             <select class="controls" id="selectCategorias" name="selectCategorias">
                                 <option>-Seleccione-</option>
+                                <option>ALERGOLOGIA</option>
+                                <option>ANDROSCOPIA</option>
+                                <option>AUDIOMETRIA</option>
+                                <option>BIOPSIA GASTRICA</option>
+                                <option>BLOQUEO UNION MIONEURAL</option>
+                                <option>CARDIOLOGIA</option>
+                                <option>CIRUGIA GENERAL</option>
                             </select>
                         </div>
-                        
-                    </div>
-
-
-                    <div>
-                        <b>N° Cédula</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
 
                     </div>
-                  
-                    <div>
-                        <b>Fecha Expedición</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
-                    </div>
 
-                    <div>
-                        <b>Nombre Completo</b>
-                    <input class="controls" type="text" name="nom" id="nomComercio" required>
+
+                    <div style="display: flex;">
+
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Nombre</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Institución</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Dirección</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+                        </div>
+
+
                     </div>
 
                     <div style="display: flex;">
-                        <div style="display: block; margin-left: 20%;">
-                            <b>Municipio</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
-                           </div>
-        
-                           <div style="display: block; margin-left: 10%;">
-                            <b>Barrio</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
-                           </div>
+
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Telefono</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Tarifa Protegemos</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Tarifa Particular</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+
                     </div>
 
-                   
-
-                   <div>
-                    <b>Dirección</b>
-                    <input class="controls" type="text" name="nom" id="nomComercio" required>
-                   </div>
+                    <div style="display: flex;">
 
 
-                   <div style="display: flex;">
-                    <div style="display: block; margin-left: 7%;">
-                        <b>Teléfono</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
-                       </div>
-    
-                       <div style="display: block; margin-left: 10%;">
-                        <b>Celular</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
-                       </div>
+                        <div style="display: block; margin-left: 15%; ">
+                            <b>Hora de llegada</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Si</option>
+                                <option>No</option>
 
-                   </div>
-                   
+                            </select>
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Maximo Pacientes Por Dia</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                    </div>
+
+                    <div style="display: flex;">
+
+
+                        <div style="display: block; margin-left: 15%;">
+
+                            <b>Dias Consulta</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+
+                        </div>
+
+                        <div style="display: block; margin-left: 15%;">
+
+                            <b>Activo</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Si</option>
+                                <option>No</option>
+
+                            </select>
+
+                        </div>
 
 
 
-                    
+                    </div>
 
-                   
-                   
-                   
-                    
-                  
-                    <!--<b>Agrega una imagen</b>
-                    <input class="controls" type="file" name="img" id="ImgComercio" required>-->
+
 
                     <button class="botons" type="button" id="agregarComercioNav"> Afiliar</button>
                 </section>
-                <!-- <section class="form-register">
-                    <h4>Categoria del comercio</h4>
-                    <select class="controls" id="selectCategorias" name="selectCategorias">
-                        <option>Seleccione Una Categoria...</option>
-                    </select>
-                    <h4>Porcentaje de Descuento</h4>
-                    <select class="controls" id="selectDescuento" name="selectCategorias">
-                        <option>Seleccione Un % descuento</option>
-                        <option>10%</option>
-                        <option>15%</option>
-                        <option>20%</option>
-                        <option>25%</option>
-                        <option>30%</option>
-                        <option>35%</option>
-                        <option>40%</option>
-                        <option>45%</option>
-                        <option>50%</option>
-                        <option>55%</option>
-                        <option>60%</option>
-                        <option>65%</option>
-                        <option>70%</option>
-                        <option>75%</option>
-                        <option>80%</option>
-                        <option>85%</option>
-                        <option>90%</option>
-                        <option>95%</option>
-                        <option>100%</option>
-                    </select>
-                    <h4>Formulario Afiliar Comercio</h4>
-                    <b>Nombre del Comercio</b>
-                    <input class="controls" type="text" name="nom" id="nomComercio" required>
-                    <b>Dirección</b>
-                    <input class="controls" type="text" name="dire" id="DireComercio" required>
-                    <b>Descripción</b>
-                    <input class="controls" type="text" name="dire" id="DireComercio" required>
-                    <b>Agrega una imagen</b>
-                    <input class="controls" type="file" name="img" id="ImgComercio" required>
 
-                    <button class="botons" type="button" id="agregarComercioNav"> REGISTRAR</button>
-                </section> -->
+                <table id="table_id" class="display">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Municipio</th>
+                            <th>Especialidad</th>
+                            <th>Nombre</th>
+                            <th>Institución</th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>POPAYAN</td>
+                            <td>ODONTOPEDIATRA</td>
+                            <td>ANGELICA ASTAIZA</td>
+                            <td>CONSULTORIO PARTICULAR</td>
+
+
+
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>POPAYAN</td>
+                            <td>CARDIOLOGIA</td>
+                            <td>CARLOS ROJAS</td>
+                            <td>VALLE DE PUBENZA</td>
+
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>POPAYAN</td>
+                            <td>MEDICINA GENERAL</td>
+                            <td>OLGA MELENDEZ</td>
+                            <td>CONSULTORIO PARTICULAR</td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
 
                 <div class="right">
                     <div class="top">
@@ -358,6 +403,10 @@
     </div>
 
     <script>
+
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
 
         const ImgComercios = document.getElementById("ImgComercio");
 

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/css/cargandoo.css">
     <link rel="stylesheet" href="./assets/css/respoDash.css">
     <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/grilla.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -40,6 +41,12 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+
+
 </head>
 
 <body class="cuerpo">
@@ -61,27 +68,27 @@
 
                 <div class="sidebar">
                     <br>
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="sedes.html"><span class="material-icons-sharp">
                             meeting_room</span>
                         <h3>Sedes</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="inventarios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Inventarios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="especialidades.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Especialidades</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="tarifas.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Tarifas</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="municipios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Municipios</h3>
                     </a>
@@ -106,22 +113,22 @@
                         <h3>Ver Usuarios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="convenios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Convenios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="serviciosAdicionales.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Servicios Adicionales</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="tarifarios.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Tarifarios</h3>
                     </a>
 
-                    <a href="#"><span class="material-icons-sharp">
+                    <a href="Preparaciones.html"><span class="material-icons-sharp">
                             local_atm</span>
                         <h3>Preparaciones</h3>
                     </a>
@@ -208,86 +215,103 @@
 
                     <div style="display: flex;">
 
-                        <div style="display: block; margin-left: 10%;">
+                        <div style="display: block; margin-left: 29%;">
                             <b>Código</b>
                             <input class="controls" type="text" name="nom" id="nomComercio" required>
                         </div>
 
-                        <div style="display: block; margin-left: 15%; ">
-                            <b>Cargo</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
-                        </div>
 
-                    </div>
-
-
-                    <div>
-                        <b>N° Cédula</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
-
-                    </div>
-
-                    <div>
-                        <b>Fecha Expedición</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
-                    </div>
-
-                    <div>
-                        <b>Nombre Completo</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
                     </div>
 
                     <div style="display: flex;">
-                        <div style="display: block; margin-left: 20%;">
-                            <b>Municipio</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
+
+                        <div style="display: block; margin-left: 2%;">
+                            <b>Email</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+
                         </div>
 
                         <div style="display: block; margin-left: 10%;">
-                            <b>Barrio</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
+                            <b>Usuario</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
                         </div>
+
+
                     </div>
-
-
-
-                    <div>
-                        <b>Dirección</b>
-                        <input class="controls" type="text" name="nom" id="nomComercio" required>
-                    </div>
-
 
                     <div style="display: flex;">
-                        <div style="display: block; margin-left: 7%;">
-                            <b>Teléfono</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+
+                        <div style="display: block; margin-left: 2%;">
+                            <b>Password</b>
+                            <input class="controls" type="password" name="nom" id="nomComercio" required>
+
                         </div>
 
                         <div style="display: block; margin-left: 10%;">
-                            <b>Celular</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+                            <b>Confirmar Password</b>
+                            <input class="controls" type="password" name="nom" id="nomComercio" required>
+                        </div>
+
+
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 40%;">
+
+                            <b>Activo</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Si</option>
+                                <option>No</option>
+
+                            </select>
+
                         </div>
 
                     </div>
 
-
-
-
-
-
-
-
-
-
-                    <button class="botons" type="button" id="agregarComercioNav"> Afiliar</button>
+                    <button class="botons" type="button" id="agregarComercioNav">Guardar</button>
                 </section>
+<br>
+<br>
+                <table id="table_id" class="display">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre Completo</th>
+                            <th>Cargo</th>
+                            <th>Sede</th>
 
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>ANGELA FERNANDA GUZMAN</td>
+                            <td>CONTROL PAPELERIA</td>
+                            <td>POPAYAN</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>DIANA VALENTINA GARCIA GARCIA</td>
+                            <td>CARTERA</td>
+                            <td>POPAYAN</td>
+
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>JOHAN FRANCISCO VILLAMARIN SOTOMAYOR</td>
+                            <td>DIGITACION</td>
+                            <td>POPAYAN</td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
 
                 <div class="right">
                     <div class="top">
@@ -315,6 +339,10 @@
     </div>
 
     <script>
+
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
 
         const ImgComercios = document.getElementById("ImgComercio");
 

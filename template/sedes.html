@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Protegemos C.G.U | Afiliar un Usuario</title>
+    <title>Grupo Protegemos C.G.U | Afiliar un Aliado</title>
     <!--Material Icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!--STYLESHEET-->
@@ -67,7 +67,7 @@
 
                 <div class="sidebar">
                     <br>
-                    <a href="sedes.html"><span class="material-icons-sharp">
+                    <a href="sedes.html" class="active" ><span class="material-icons-sharp">
                             meeting_room</span>
                         <h3>Sedes</h3>
                     </a>
@@ -92,12 +92,12 @@
                         <h3>Municipios</h3>
                     </a>
 
-                    <a href="afiliarUsuario.html"><span class="material-icons-sharp">
+                    <a href="afiliarUsuario.html" ><span class="material-icons-sharp">
                             person_3</span>
                         <h3>Afiliar Aliado</h3>
                     </a>
 
-                    <a href="afiliarPersonal.html" class="active"><span class="material-icons-sharp">
+                    <a href="afiliarPersonal.html"><span class="material-icons-sharp">
                             people</span>
                         <h3>Afiliar Personal</h3>
                     </a>
@@ -132,12 +132,12 @@
                         <h3>Preparaciones</h3>
                     </a>
 
+
                     <a href="index.html"><span class="material-icons-sharp">
                             logout</span>
                         <h3>Logout</h3>
                     </a>
                 </div>
-
 
             </aside>
 
@@ -209,132 +209,79 @@
                         <h1 id="name" style="margin-left: 0px; font-size: 20px; color: #d79d13; width: 100%; height: 28px; overflow: hidden;">Jua</h1>
                     </div> -->
                 </div>
+
+                
+
                 <section class="form-register">
-                    <h4>Afiliar Personal</h4>
+                    <h4>Crear Sede</h4>
 
                     <div style="display: flex;">
 
                         <div style="display: block; margin-left: 10%;">
                             <b>Código</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
-                        </div>
-
-                        <div style="display: block; margin-left: 15%; ">
-                            <b>Cargo</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                                <option>ASESOR COMERCIAL</option>
-                                <option>ADMINISTRADOR</option>
-                                <option>ARCHIVO</option>
-
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div style="display: flex;">
-
-                        <div style="display: block; margin-left: 2%;">
-                            <b>N° Cédula</b>
                             <input class="controls" type="number" name="nom" id="nomComercio" required>
-
-                        </div>
-
-                        <div style="display: block; margin-left: 2%;">
-                            <b>Fecha Expedición</b>
-                            <input class="controls" type="date" name="nom" id="nomComercio" required>
-                        </div>
-
-                        <div style="display: block; margin-left: 2%;">
-                            <b>Nombre Completo</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
-                        </div>
-
-                    </div>
-
-
-
-
-
-                    <div style="display: flex;">
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Municipio</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
                         </div>
 
                         <div style="display: block; margin-left: 10%;">
-                            <b>Barrio</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                            </select>
-                        </div>
-
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Dirección</b>
+                            <b>Sedes</b>
                             <input class="controls" type="text" name="nom" id="nomComercio" required>
                         </div>
 
                     </div>
 
                     <div style="display: flex;">
-                        <div style="display: block; margin-left: 7%;">
-                            <b>Teléfono</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
-                        </div>
-
                         <div style="display: block; margin-left: 10%;">
-                            <b>Celular</b>
+                            <b>Direccion</b>
                             <input class="controls" type="text" name="nom" id="nomComercio" required>
                         </div>
 
+                        <div style="display: block; margin-left: 8%;">
+                            <b>Telefono</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
                     </div>
 
-
-                    <!--<b>Agrega una imagen</b>
-                    <input class="controls" type="file" name="img" id="ImgComercio" required>-->
-
-                    <button class="botons" type="button" id="agregarComercioNav"> Afiliar</button>
+                    <button class="botons" type="button" id="agregarComercioNav">Agregar Sede</button>
                 </section>
+                <br>
+                <br>
+
                 <table id="table_id" class="display">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Nombre Completo</th>
-                            <th>Cargo</th>
+                            <th>Codigo</th>
                             <th>Sede</th>
-
-
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            
 
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>001</td>
-                            <td>ANGELA FERNANDA GUZMAN</td>
-                            <td>CONTROL PAPELERIA</td>
-                            <td>POPAYAN</td>
+                            <td>Santiago de Cali</td>
+                            <td>Cra 4# 34n</td>
+                            <td>3137563912</td>
+                            
                         </tr>
                         <tr>
                             <td>002</td>
-                            <td>DIANA VALENTINA GARCIA GARCIA</td>
-                            <td>CARTERA</td>
-                            <td>POPAYAN</td>
-
+                            <td>La Plata</td>
+                            <td>Calle 7# 3ra</td>
+                            <td>3215789641</td>
                         </tr>
                         <tr>
                             <td>003</td>
-                            <td>JOHAN FRANCISCO VILLAMARIN SOTOMAYOR</td>
-                            <td>DIGITACION</td>
-                            <td>POPAYAN</td>
-
+                            <td>La Bodega</td>
+                            <td>Calle 17# 3ra</td>
+                            <td>321500145</td>
                         </tr>
-
-
+                       
+                       
                     </tbody>
                 </table>
+
 
                 <div class="right">
                     <div class="top">
@@ -363,7 +310,7 @@
 
     <script>
 
-        $(document).ready(function () {
+$(document).ready(function () {
             $('#table_id').DataTable();
         });
 
