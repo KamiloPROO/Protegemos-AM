@@ -77,6 +77,9 @@
 
   }
 
+
+
+
   .botons3 {
     width: 40%;
     background: #ffffff;
@@ -92,6 +95,16 @@
 
   }
 
+
+  .botons3:hover {
+
+  
+    background: #2a774d;
+ 
+    color: white;
+  
+
+  }
 
   @media (max-width: 500px) {
 

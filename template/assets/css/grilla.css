@@ -23,6 +23,10 @@ label{
     color: black;
 }
 
+#table_id_2_info.dataTables_info{
+    color: black;
+}
+
 #table_id_previous.paginate_button.previous.disabled{
     color: black !important;
 }

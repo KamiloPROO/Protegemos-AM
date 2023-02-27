@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="./assets/css/cargandoo.css">
     <link rel="stylesheet" href="./assets/css/respoDash.css">
     <link rel="stylesheet" href="./assets/css/menuStyle.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link rel="stylesheet" href="./assets/css/grilla.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -39,6 +42,11 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+
 </head>
 
 <body class="cuerpo">
@@ -58,35 +66,41 @@
                     </div>
                 </div>
 
-
-
                 <div class="sidebar">
                     <br>
-                    <a href="Dash.html" class="active"><span class="material-icons-sharp">
-                            loyalty</span>
-                        <h3>Membresias</h3>
+                    <a href="verInventGeneral.html"  ><span class="material-icons-sharp">
+                        inventory</span>
+                        <h3>Equipos de Oficina</h3>
                     </a>
 
-                    <a href="mis_compras.html"><span class="material-icons-sharp">
-                            local_mall</span>
-                        <h3>Mis Compras</h3>
+                    <a href="insuOficina.html"><span class="material-icons-sharp">
+                        inventory</span>
+                        <h3>Insumos de Oficina</h3>
                     </a>
 
-                    <a href="mis_ventas.html"><span class="material-icons-sharp">
-                            credit_card</span>
-                        <h3>Mis ventas</h3>
+                    <a href="equiCampa.html"><span class="material-icons-sharp">
+                        inventory</span>
+                        <h3>Equipos e Insumos Campañas de Promoción</h3>
                     </a>
 
-                    <a href="ecommerce.html"><span class="material-icons-sharp">
-                            shopping_bag</span>
-                        <h3>Ecommerce</h3>
+                    <a href="insuAseo.html"><span class="material-icons-sharp">
+                        inventory</span>
+                        <h3>Insumos de Aseo y Desinfección</h3>
                     </a>
+
+                    <a href="insuCafe.html" class="active" ><span class="material-icons-sharp">
+                        inventory</span>
+                        <h3>Insumos de cafeteria</h3>
+                    </a>
+
+                    
+
 
                     <a href="index.html"><span class="material-icons-sharp">
                             logout</span>
                         <h3>Logout</h3>
                     </a>
-
+                </div>
 
             </aside>
 
@@ -154,72 +168,75 @@
 
                     <div style="display: flex; margin-left: 45%; overflow: hidden;">
                         <br>
-                        <h1 id="cuentaM" style="color: #2a774d;">Membresias</h1>
+                        <h1 id="cuentaM" style="color: #2a774d;">Inventarios</h1>
                         <br>
-                        <div style="display: flex; margin-left: 55%;">
-                            <h1 id="name"
-                                style="margin-left: 0px; font-size: 20px; color: #2a774d; width: 100%; height: 28px; overflow: hidden;">
-                                Juan XD</h1>
-                        </div>
                     </div>
 
-                    <div class="cardsInversionCompras" id="product-list">
+                    <div class="menuInventarios">
 
-                        <div class="planess">
+                        <div style="display: flex;">
 
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono()"
-                                style="background:url(./assets/images/memclasica.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
+                            <button class="botons2" type="button" id="agregarComercioNav"
+                                onclick="verInventarioGeneral()">Inventario General</button>
 
-                        <div class="planess">
+                            <button class="botons3" type="button" id="agregarComercioNav"
+                                onclick="verPapeleria()">Inventario Papeleria</button>
 
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono1()"
-                                style="background:url(./assets/images/memvip.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
+                            <button class="botons3" type="button" id="agregarComercioNav"
+                                onclick="verSubBodega()">SubBodega</button>
 
-                        <div class="planess">
-
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono2()"
-                                style="background:url(./assets/images/memgold.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="planess">
-
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono3()"
-                                style="background:url(./assets/images/memmaster.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
                         </div>
 
                     </div>
 
-                    <!-- <button onclick="comprar()" style="background: #2a774d; color: white; font-weight: bold; "class="btnPublicarCompra">Publicar Venta</button> -->
+                    <div style="display: flex; margin-left: 40%; overflow: hidden;">
+                        <br>
+                        <h1 id="cuentaM" style="color: #2a774d;">Inventario General</h1>
+                        <br>
+                    </div>
+
+                    <table id="table_id_2" class="display">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Cod Interno</th>
+                                <th>Articulo</th>
+                                <th>Disponible</th>
+                                <th>Sede</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>04/05/2022</td>
+                                <td>06</td>
+                                <td>AGUA EN BOTELLA</td>
+                                <td>3</td>
+                                <td>POPAYAN</td>
+
+
+                            </tr>
+                            <tr>
+                                <td>04/05/2022</td>
+                                <td>05</td>
+                                <td>PAQUETE DE SERVILLETA</td>
+                                <td>0</td>
+                                <td>POPAYAN</td>
+
+                            </tr>
+                            <tr>
+                                <td>04/05/2022</td>
+                                <td>04</td>
+                                <td>PAQUETE MEZCLADORES</td>
+                                <td>1</td>
+                                <td>POPAYAN</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
 
                     <div class="right">
                         <div class="top">
@@ -230,10 +247,6 @@
                     </div>
 
                 </div>
-
-
-
-
 
 
             </div>
@@ -251,82 +264,45 @@
 
     <script>
 
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
 
-        function AgregarBono() {
-
-            window.location.href = "agregarBono.html"
-
-        }
-
-
-        function AgregarBono1() {
-
-            window.location.href = "agregarBono.html"
-
-        }
+        $(document).ready(function () {
+            $('#table_id_2').DataTable();
+        });
 
 
-        function AgregarBono2() {
+        function verPapeleria() {
 
-            window.location.href = "agregarBono.html"
+            window.location.href = "inventario.html"
 
         }
 
 
-        function AgregarBono3() {
+        function verInventarioGeneral() {
 
-            window.location.href = "agregarBono.html"
-
-        }
-
-        function membreNavideña() {
-
-            window.location.href = "membreNavideña.html"
-
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'server under maintenance',
-            // })
+            window.location.href = "verInventGeneral.html"
 
         }
 
-        function membreSanta() {
 
-            window.location.href = "membreSemSanta.html"
+        function verSubBodega() {
 
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'server under maintenance',
-            // })
+            window.location.href = "verSubBodega.html"
 
         }
 
-        function membreAliado() {
 
-            window.location.href = "membreAliado.html"
-
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'server under maintenance',
-            // })
-
-        }
 
 
 
     </script>
 
-    <!-- Fondo Particles-->
-    <!-- <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/orders.js"></script>
-    <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/particles.min.js"></script>-->
 
-    <script src="./Logica/Dashboard/HttpsDashboard.js"></script>
-
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
