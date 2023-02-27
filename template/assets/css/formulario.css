@@ -73,8 +73,6 @@
     font-size: 16px;
     border-radius: 10px;
     margin-left: 6%;
-
-
   }
 
 
@@ -94,6 +92,21 @@
     
 
   }
+
+  .botonsCon {
+    width: 20%;
+    background: #2a774d;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 6%;
+    margin-top: 3%;
+  }
+
 
 
   .botons3:hover {
