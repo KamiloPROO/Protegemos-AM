@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Protegemos C.G.U | Membresias</title>
+    <!--Material Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./assets/css/styleDash.css">
+    <link rel="stylesheet" href="./assets/css/compraventa.css">
+    <link rel="stylesheet" href="./assets/css/cargandoo.css">
+    <link rel="stylesheet" href="./assets/css/respoDash.css">
+    <link rel="stylesheet" href="./assets/css/menuStyle.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link rel="stylesheet" href="./assets/css/grilla.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"
+        integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body class="cuerpo">
+
+    <div>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <br>
+                        <img src="./assets/img/logodash.png" style="height: 130px; margin-top: -10px;">
+
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close </span>
+                    </div>
+                </div>
+
+
+            </aside>
+
+
+
+
+            <!-----------End of Aside------------>
+
+            <div class="form-content">
+
+                <div class="Nav_inner">
+                    <nav>
+                        <a href="sedes.html" class="iconos"><span class="material-icons-sharp">
+                                admin_panel_settings</span>
+                            <h3 class="letrasNav">Administrador</h3>
+                        </a>
+                        <a href="inventario.html" class="iconos"><span class="material-icons-sharp">
+                                inventory</span>
+                            <h3 class="letrasNav">Inventario</h3>
+                        </a>
+                        <a href="papeleria.html" class="iconos"><span class="material-icons-sharp">
+                                feed</span>
+                            <h3 class="letrasNav">Papelería</h3>
+                        </a>
+
+                        <a href="contratos.html" class="iconos"><span class="material-icons-sharp">
+                                note_alt</span>
+                            <h3 class="letrasNav">Contratos</h3>
+                        </a>
+                        <a href="abonos.html" class="iconos"><span class="material-icons-sharp">
+                                monetization_on</span>
+                            <h3 class="letrasNav">Abonos</h3>
+                        </a>
+                        <a href="cartera.html" class="iconos"><span class="material-icons-sharp">
+                                wallet</span>
+                            <h3 class="letrasNav">Cartera</h3>
+                        </a>
+
+                        <a href="citasmedicas.html" class="iconos"><span class="material-icons-sharp">
+                                medical_information</span>
+                            <h3 class="letrasNav">Citas Médicas</h3>
+                        </a>
+                        <a href="reportes.html" class="iconos"><span class="material-icons-sharp">
+                                crisis_alert</span>
+                            <h3 class="letrasNav">Reportes</h3>
+                        </a>
+                        <a href="guiamedica.html" class="iconos"><span class="material-icons-sharp">
+                                support_agent</span>
+                            <h3 class="letrasNav">Guia Médica</h3>
+                        </a>
+                        <a href="consulta.html" class="iconos"><span class="material-icons-sharp">
+                                leak_add</span>
+                            <h3 class="letrasNav">Consulta</h3>
+                        </a>
+                        <a href="qpr.html" class="iconos"><span class="material-icons-sharp">
+                                adjust</span>
+                            <h3 class="letrasNav">QPR</h3>
+                        </a>
+
+                        <a href="datosacceso.html" class="iconos"><span class="material-icons-sharp">
+                                key</span>
+                            <h3 class="letrasNav">Datos Acceso</h3>
+                        </a>
+                    </nav>
+
+                    <div style="display: flex; margin-left: 35%; overflow: hidden;">
+                        <br>
+                        <h1 id="cuentaM" style="color: #2a774d;">Citas Medicas: Opciones</h1>
+                        <br>
+                    </div>
+
+                    <div class="menuInventarios">
+
+                        <div style="display: flex;">
+
+                            <button class="botons2" type="button" id="agregarComercioNav"
+                                onclick="bloqueoAgenda()">Bloque de Agenda</button>
+
+                            <button class="botons3" type="button" id="agregarComercioNav"
+                                onclick="buscarCita()">Buscar Cita Programada</button>
+
+                            <button class="botons3" type="button" id="agregarComercioNav"
+                                onclick="registrarCita()">Registrar Nueva Cita</button>
+
+                        </div>
+
+                    </div>
+
+                    
+                    <div style="display: flex; margin-left: 37%; overflow: hidden;">
+                        <br>
+                        <h1 id="cuentaM" style="color: #2a774d;">Administración de Bloqueos</h1>
+                        <br>
+                    </div>
+                  
+
+                    <section class="form-register">
+                        <h4>Buscar Bloqueos de Agenda para Especialistas</h4>
+    
+                        <div style="display: flex;">
+    
+                            <div style="display: block; margin-left: 16%;">
+                                <b>Especialista</b>
+                                <input class="controls" type="text" name="nom" id="nomComercio" required>
+                            </div>
+    
+                            <button class="botonsCon" type="button" id="agregarComercioNav">Consultar</button>
+                        </div>
+
+                       
+    
+                    </section>
+                    <br>
+                    <table id="table_id" class="display">
+                        <thead>
+                            <tr>
+                                <th>Especialistas</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
+                                <th>Observaciones</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+               
+
+
+                    <div class="right">
+                        <div class="top">
+                            <button id="menu-btn">
+                                <span class="material-icons-sharp">menu</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <!-- End of Main-->
+
+        </div>
+        <div id="cargando">
+            <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json"
+                background="transparent" speed="1" loop autoplay>
+            </lottie-player>
+        </div>
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
+
+        $(document).ready(function () {
+            $('#table_id_2').DataTable();
+        });
+
+
+        function registrarCita() {
+
+            window.location.href = "citasmedicas.html"
+
+        }
+
+
+        function buscarCita() {
+
+            window.location.href = "buscarCita.html"
+
+        }
+
+
+        function bloqueoAgenda() {
+
+            window.location.href = "bloqueoAgenda.html"
+
+        }
+
+
+
+
+
+    </script>
+
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
