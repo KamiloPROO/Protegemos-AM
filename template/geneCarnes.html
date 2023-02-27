@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Protegemos C.G.U | Afiliar un Aliado</title>
+    <!--Material Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./assets/css/styleDash.css">
+    <link rel="stylesheet" href="./assets/css/menuStyle.css">
+    <link rel="stylesheet" href="./assets/css/compraventa.css">
+    <link rel="stylesheet" href="./assets/css/cargandoo.css">
+    <link rel="stylesheet" href="./assets/css/respoDash.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/grilla.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"
+        integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body class="cuerpo">
+
+    <div>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <br>
+                        <img src="./assets/img/logodash.png" style="height: 130px; margin-top: -5px;">
+
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close </span>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <br>
+                    <a href="cartera.html" ><span class="material-icons-sharp">
+                        wallet</span>
+                        <h3>Tarjetas de Cobro</h3>
+                    </a>
+
+                    <a href="tarjetasInco.html"  ><span class="material-icons-sharp">
+                        warning</span>
+                        <h3>Tarjetas Inconvenientes</h3>
+                    </a>
+                    <a href="geneCarnes.html" class="active" ><span class="material-icons-sharp">
+                        account_balance_wallet</span>
+                        <h3>Generar Carne</h3>
+                    </a>
+
+                    <a href="entreCarne.html"><span class="material-icons-sharp">
+                        inventory</span>
+                        <h3>Entrega de carnes</h3>
+                    </a>
+                    <a href="adminRecibos.html" ><span class="material-icons-sharp">
+                        description</span>
+                        <h3>Admin Recibos</h3>
+                    </a>
+                    <a href="index.html"><span class="material-icons-sharp">
+                            logout</span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+
+            </aside>
+
+            <!-----------End of Aside------------>
+
+            <div class="form-content">
+
+
+                <div class="Nav_inner">
+                    <nav>
+                        <a href="Dash.html" class="iconos"><span class="material-icons-sharp">
+                                admin_panel_settings</span>
+                            <h3 class="letrasNav">Administrador</h3>
+                        </a>
+                        <a href="inventario.html" class="iconos"><span class="material-icons-sharp">
+                                inventory</span>
+                            <h3 class="letrasNav">Inventario</h3>
+                        </a>
+                        <a href="papeleria.html" class="iconos"><span class="material-icons-sharp">
+                                feed</span>
+                            <h3 class="letrasNav">Papelería</h3>
+                        </a>
+
+                        <a href="contratos.html" class="iconos"><span class="material-icons-sharp">
+                                note_alt</span>
+                            <h3 class="letrasNav">Contratos</h3>
+                        </a>
+                        <a href="abonos.html" class="iconos"><span class="material-icons-sharp">
+                                monetization_on</span>
+                            <h3 class="letrasNav">Abonos</h3>
+                        </a>
+                        <a href="cartera.html" class="iconos"><span class="material-icons-sharp">
+                                wallet</span>
+                            <h3 class="letrasNav">Cartera</h3>
+                        </a>
+
+                        <a href="citasmedicas.html" class="iconos"><span class="material-icons-sharp">
+                                medical_information</span>
+                            <h3 class="letrasNav">Citas Médicas</h3>
+                        </a>
+                        <a href="reportes.html" class="iconos"><span class="material-icons-sharp">
+                                crisis_alert</span>
+                            <h3 class="letrasNav">Reportes</h3>
+                        </a>
+                        <a href="guiamedica.html" class="iconos"><span class="material-icons-sharp">
+                                support_agent</span>
+                            <h3 class="letrasNav">Guia Médica</h3>
+                        </a>
+                        <a href="consulta.html" class="iconos"><span class="material-icons-sharp">
+                                leak_add</span>
+                            <h3 class="letrasNav">Consulta</h3>
+                        </a>
+                        <a href="qpr.html" class="iconos"><span class="material-icons-sharp">
+                                adjust</span>
+                            <h3 class="letrasNav">QPR</h3>
+                        </a>
+
+                        <a href="datosacceso.html" class="iconos"><span class="material-icons-sharp">
+                                key</span>
+                            <h3 class="letrasNav">Datos Acceso</h3>
+                        </a>
+
+                    </nav>
+                </div>
+
+                <div style="display: flex; margin-left: 41%; overflow: hidden;">
+                    <br>
+                    <h1 id="cuentaM" style="color: #2a774d;">Generar Carné</h1>
+                    <br>
+                </div>
+
+                <section class="form-register">
+                    <h4>Consultar Provisional</h4>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 20%; width: 38%;">
+                            <b>N° Provisional</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <button class="botonsCon" type="button" id="agregarComercioNav">Consultar</button>
+               
+
+                    </div> 
+
+                </section>
+                <br>
+
+                <section class="form-register">
+                    <h4>Filtro de Busqueda</h4>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>Desde</b>
+                            <input class="controls" type="date" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>Hasta</b>
+                            <input class="controls" type="date" name="nom" id="nomComercio" required>
+                        </div>
+                    </div> 
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>N° Carné</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>N° Provisional</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+                    </div> 
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>N° Contrato</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>Estado</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Generado</option>
+                                <option>Proceso de Entrega</option>
+                                <option>Entregado</option>
+                                <option>Anulado</option>
+
+                            </select>
+                        </div>
+                    </div> 
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 34%; width: 38%;">
+                            <b>Tipo</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Clasica</option>
+                                <option>Gold</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="botonsCon" type="button" id="agregarComercioNav">Buscar</button>
+               
+                    <button class="botonsCon" type="button" id="agregarComercioNav">Reset</button>
+               
+
+                </section>
+                <br>
+                <br>
+
+                <table id="table_id" class="display">
+                    <thead>
+                        <tr>
+                            <th>N° Carné</th>
+                            <th>N° Prov</th>
+                            <th>N° Con</th>
+                            <th>F. Creado</th>
+                            <th>Estado</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                       
+                       
+                    </tbody>
+                </table>
+
+
+                <div class="right">
+                    <div class="top">
+                        <button id="menu-btn">
+                            <span class="material-icons-sharp">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- <div id="cargando2">
+                    <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json"
+                        background="transparent" speed="1" loop autoplay>
+                    </lottie-player>
+                </div> -->
+
+
+            </div>
+
+            <!-- End of Main-->
+
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+
+$(document).ready(function () {
+            $('#table_id').DataTable();
+        });
+
+        const ImgComercios = document.getElementById("ImgComercio");
+
+        ImgComercios.addEventListener("change", () => {
+
+            const file = ImgComercios.files[0];
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+
+                const comoseria = reader.result
+                console.log(comoseria);
+                localStorage.setItem("imagenBaseNavideña", comoseria)
+
+            });
+
+            reader.readAsDataURL(file);
+
+        })
+    </script>
+
+    <script>
+
+        function inventarioPapeleria() {
+
+            window.location.href = "inventarios.html"
+
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: 'Oops...',
+            //     text: 'server under maintenance',
+            // })
+
+        }
+
+        function inventarioGeneral() {
+
+            window.location.href = "inventariosGeneral.html"
+
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: 'Oops...',
+            //     text: 'server under maintenance',
+            // })
+
+        }
+
+        function membreAliado() {
+
+            // window.location.href = "preventa.html"
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
+
+        }
+
+
+
+    </script>
+
+    <!-- Fondo Particles-->
+    <!-- <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/orders.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/particles.min.js"></script>-->
+
+    <!-- <script src="./assets/js/logica/utils/HttpsVerMembresias.js"></script> -->
+
+    <!-- <script src="./assets/js/logica/router/router.js"></script>
+
+
+    <script src="./assets/js/logica/utils/HttpsAgregarComercio.js"></script>
+    <script src="./assets/js/logica/business/agregarComercioBussiness.js"></script>
+    <script src="./assets/js/logica/controller/agregarComercioController.js"></script>
+    <script src="./assets/js/logica/events/agregarComercioEvents.js"></script>
+
+    <script src="./assets/js/Logica/utils/HttpsListarCatagorias.js"></script> -->
+
+</body>
+
+</html>

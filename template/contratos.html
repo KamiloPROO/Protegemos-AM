@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Protegemos C.G.U | Membresias</title>
+    <title>Grupo Protegemos C.G.U | Afiliar un Aliado</title>
     <!--Material Icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!--STYLESHEET-->
     <link rel="stylesheet" href="./assets/css/styleDash.css">
+    <link rel="stylesheet" href="./assets/css/menuStyle.css">
     <link rel="stylesheet" href="./assets/css/compraventa.css">
     <link rel="stylesheet" href="./assets/css/cargandoo.css">
     <link rel="stylesheet" href="./assets/css/respoDash.css">
-    <link rel="stylesheet" href="./assets/css/menuStyle.css">
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/grilla.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -39,6 +41,11 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
+
 </head>
 
 <body class="cuerpo">
@@ -49,7 +56,7 @@
                 <div class="top">
                     <div class="logo">
                         <br>
-                        <img src="./assets/img/logodash.png" style="height: 130px; margin-top: -10px;">
+                        <img src="./assets/img/logodash.png" style="height: 130px; margin-top: -5px;">
 
                     </div>
                     <div class="close" id="close-btn">
@@ -58,29 +65,19 @@
                     </div>
                 </div>
 
-
-
                 <div class="sidebar">
                     <br>
-                    <a href="Dash.html" class="active"><span class="material-icons-sharp">
-                            loyalty</span>
-                        <h3>Membresias</h3>
+                    <a href="contratos.html" class="active"><span class="material-icons-sharp">
+                        description</span>
+                        <h3>Afiliación Familiar</h3>
                     </a>
 
-                    <a href="mis_compras.html"><span class="material-icons-sharp">
-                            local_mall</span>
-                        <h3>Mis Compras</h3>
+                    <a href="afiliacionEmpresas.html"><span class="material-icons-sharp">
+                        description</span>
+                        <h3>Afiliación Empresas</h3>
                     </a>
 
-                    <a href="mis_ventas.html"><span class="material-icons-sharp">
-                            credit_card</span>
-                        <h3>Mis ventas</h3>
-                    </a>
-
-                    <a href="ecommerce.html"><span class="material-icons-sharp">
-                            shopping_bag</span>
-                        <h3>Ecommerce</h3>
-                    </a>
+                   
 
                     <a href="index.html"><span class="material-icons-sharp">
                             logout</span>
@@ -90,16 +87,14 @@
 
             </aside>
 
-
-
-
             <!-----------End of Aside------------>
 
             <div class="form-content">
 
+
                 <div class="Nav_inner">
                     <nav>
-                        <a href="sedes.html" class="iconos"><span class="material-icons-sharp">
+                        <a href="Dash.html" class="iconos"><span class="material-icons-sharp">
                                 admin_panel_settings</span>
                             <h3 class="letrasNav">Administrador</h3>
                         </a>
@@ -150,90 +145,82 @@
                                 key</span>
                             <h3 class="letrasNav">Datos Acceso</h3>
                         </a>
+
                     </nav>
-
-                    <div style="display: flex; margin-left: 45%; overflow: hidden;">
-                        <br>
-                        <h1 id="cuentaM" style="color: #2a774d;">Membresias</h1>
-                        <br>
-                        <div style="display: flex; margin-left: 55%;">
-                            <h1 id="name"
-                                style="margin-left: 0px; font-size: 20px; color: #2a774d; width: 100%; height: 28px; overflow: hidden;">
-                                Juan XD</h1>
-                        </div>
-                    </div>
-
-                    <div class="cardsInversionCompras" id="product-list">
-
-                        <div class="planess">
-
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono()"
-                                style="background:url(./assets/images/memclasica.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="planess">
-
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono1()"
-                                style="background:url(./assets/images/memvip.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="planess">
-
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono2()"
-                                style="background:url(./assets/images/memgold.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="planess">
-
-                            <div class="cardInversion" id="plan2" onclick="AgregarBono3()"
-                                style="background:url(./assets/images/memmaster.png);background-repeat: no-repeat;background-size: cover; height: 230px">
-                                <div style="margin-top: 70px">
-                                    <br>
-                                    <!-- <h3 style="margin-left: 0px;">${compras.DescripcionCupon}</h3>
-                              <button onclick="membreNavideña()" style="background: #fff; color: black; font-weight: bold; "class="btnComprar">Afiliar comercio</button>
-                             -->
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- <button onclick="comprar()" style="background: #2a774d; color: white; font-weight: bold; "class="btnPublicarCompra">Publicar Venta</button> -->
-
-                    <div class="right">
-                        <div class="top">
-                            <button id="menu-btn">
-                                <span class="material-icons-sharp">menu</span>
-                            </button>
-                        </div>
-                    </div>
-
                 </div>
 
+                <div style="display: flex; margin-left: 45%; overflow: hidden;">
+                    <br>
+                    <h1 id="cuentaM" style="color: #2a774d;">Contratos</h1>
+                    <br>
+                </div>
+
+                <section class="form-register">
+                    <h4>Buscar Contrato</h4>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>N° Cedula</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>N° Contrato</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+                    </div>
+
+                    
+
+                    <button class="botons" type="button" id="agregarComercioNav">Consultar</button>
+                </section>
+                <br>
+                <br>
+<!-- 
+                <table id="table_id" class="display">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Categoria</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Equipos de Oficina</td>
+                       
+                            
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Insumos de Oficina</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>EQUIPOS E INSUMOS CAMPAÑAS DE PROMOCION</td>
+                       
+                        </tr>
+                       
+                       
+                    </tbody>
+                </table> -->
 
 
-
+                <div class="right">
+                    <div class="top">
+                        <button id="menu-btn">
+                            <span class="material-icons-sharp">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- <div id="cargando2">
+                    <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json"
+                        background="transparent" speed="1" loop autoplay>
+                    </lottie-player>
+                </div> -->
 
 
             </div>
@@ -241,47 +228,43 @@
             <!-- End of Main-->
 
         </div>
-        <div id="cargando">
-            <lottie-player src="https://lottie.host/2d2fef52-01a5-403e-b33e-6db96d5ebaec/AiOPgStXGM.json"
-                background="transparent" speed="1" loop autoplay>
-            </lottie-player>
-        </div>
-    </div>
 
+
+
+
+    </div>
 
     <script>
 
+$(document).ready(function () {
+            $('#table_id').DataTable();
+        });
 
-        function AgregarBono() {
+        const ImgComercios = document.getElementById("ImgComercio");
 
-            window.location.href = "agregarBono.html"
+        ImgComercios.addEventListener("change", () => {
 
-        }
+            const file = ImgComercios.files[0];
+            const reader = new FileReader();
 
+            reader.addEventListener("load", () => {
 
-        function AgregarBono1() {
+                const comoseria = reader.result
+                console.log(comoseria);
+                localStorage.setItem("imagenBaseNavideña", comoseria)
 
-            window.location.href = "agregarBono.html"
+            });
 
-        }
+            reader.readAsDataURL(file);
 
+        })
+    </script>
 
-        function AgregarBono2() {
+    <script>
 
-            window.location.href = "agregarBono.html"
+        function inventarioPapeleria() {
 
-        }
-
-
-        function AgregarBono3() {
-
-            window.location.href = "agregarBono.html"
-
-        }
-
-        function membreNavideña() {
-
-            window.location.href = "membreNavideña.html"
+            window.location.href = "inventarios.html"
 
             // Swal.fire({
             //     icon: 'error',
@@ -291,9 +274,9 @@
 
         }
 
-        function membreSanta() {
+        function inventarioGeneral() {
 
-            window.location.href = "membreSemSanta.html"
+            window.location.href = "inventariosGeneral.html"
 
             // Swal.fire({
             //     icon: 'error',
@@ -305,13 +288,13 @@
 
         function membreAliado() {
 
-            window.location.href = "membreAliado.html"
+            // window.location.href = "preventa.html"
 
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'server under maintenance',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'server under maintenance',
+            })
 
         }
 
@@ -325,8 +308,17 @@
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/particles.min.js"></script>-->
 
-    <script src="./Logica/Dashboard/HttpsDashboard.js"></script>
+    <!-- <script src="./assets/js/logica/utils/HttpsVerMembresias.js"></script> -->
 
+    <!-- <script src="./assets/js/logica/router/router.js"></script>
+
+
+    <script src="./assets/js/logica/utils/HttpsAgregarComercio.js"></script>
+    <script src="./assets/js/logica/business/agregarComercioBussiness.js"></script>
+    <script src="./assets/js/logica/controller/agregarComercioController.js"></script>
+    <script src="./assets/js/logica/events/agregarComercioEvents.js"></script>
+
+    <script src="./assets/js/Logica/utils/HttpsListarCatagorias.js"></script> -->
 
 </body>
 
