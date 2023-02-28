@@ -46,7 +46,6 @@
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
 
-
 </head>
 
 <body class="cuerpo">
@@ -66,79 +65,7 @@
                     </div>
                 </div>
 
-                <div class="sidebar">
-                    <br>
-                    <a href="sedes.html"  ><span class="material-icons-sharp">
-                            meeting_room</span>
-                        <h3>Sedes</h3>
-                    </a>
 
-                    <a href="inventarios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Inventarios</h3>
-                    </a>
-
-                    <a href="especialidades.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Especialidades</h3>
-                    </a>
-
-                    <a href="tarifas.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Tarifas</h3>
-                    </a>
-
-                    <a href="municipios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Municipios</h3>
-                    </a>
-
-                    <a href="afiliarUsuario.html" ><span class="material-icons-sharp">
-                            person_3</span>
-                        <h3>Afiliar Aliado</h3>
-                    </a>
-
-                    <a href="afiliarPersonal.html"><span class="material-icons-sharp">
-                            people</span>
-                        <h3>Afiliar Personal</h3>
-                    </a>
-
-                    <a href="afiliarMedico.html"><span class="material-icons-sharp">
-                            medication_liquid</span>
-                        <h3>Afiliar Médico</h3>
-                    </a>
-
-                    <a href="listarUsuarios.html" class="active" ><span class="material-icons-sharp">
-                            people</span>
-                        <h3>Ver Usuarios</h3>
-                    </a>
-
-                    <a href="convenios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Convenios</h3>
-                    </a>
-
-                    <a href="serviciosAdicionales.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Servicios Adicionales</h3>
-                    </a>
-
-                    <a href="tarifarios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Tarifarios</h3>
-                    </a>
-
-                    <a href="Preparaciones.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Preparaciones</h3>
-                    </a>
-
-
-                    <a href="index.html"><span class="material-icons-sharp">
-                            logout</span>
-                        <h3>Logout</h3>
-                    </a>
-                </div>
 
 
             </aside>
@@ -206,56 +133,116 @@
                 </div>
 
 
+                <section class="form-register">
+                    <h4>QPR (Quejas,Peticiones,Reclamos)</h4>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Cedula</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Nombre</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+                        </div>
+
+                        <!-- <div style="display: block; margin-left: 15%; ">
+                            <b>Cargo</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>ASESOR COMERCIAL</option>
+                                <option>ADMINISTRADOR</option>
+                                <option>ARCHIVO</option>
+
+                            </select>
+                        </div> -->
+
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%; width: 38%;">
+                            <b>Dirección</b>
+                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Telefono</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+                    </div>
+
+                    <div style="display: block; margin-left: 33%; width: 40%;">
+                        <b>Tipo</b>
+                        <select class="controls" id="selectCategorias" name="selectCategorias">
+                            <option>-Seleccione-</option>
+                            <option>Queja</option>
+                            <option>Petición</option>
+                            <option>Reclamo</option>
+                        </select>
+                    </div>
+
+                    <div style="display: block; margin-left: 33%; width: 40%;">
+                        <b>Solicitud</b>
+                        <textarea class="controls"></textarea>
+                    </div>
+
+                    <div style="display: block; margin-left: 33%; width: 40%;">
+                        <b>Responsable</b>
+                        <select class="controls" id="selectCategorias" name="selectCategorias">
+                            <option>-Seleccione-</option>
+                            <option>CARNETIZACION CALI</option>
+                            <option>ANGELICA FERNANDA GUZMAN</option>
+                            <option>DIANA VALENTINA GARCIA</option>
+                        </select>
+                    </div>
+
+                    <button class="botons" type="button" id="agregarComercioNav"> Guardar</button>
+                </section>
+
+                <br>
                 <table id="table_id" class="display">
                     <thead>
                         <tr>
-                            <th>Suscriptor</th>
-                            <th>Direccion</th>
-                            <th>Barrio</th>
-                            <th>Telefono</th>
-                            <th>Celular</th>
-                            <th>Ciudad</th>
-                            <th>Correo Electronico</th>
+                            <th>N° Radicación</th>
+                            <th>Solicitud</th>
+
+
+
 
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Juan Camilo Gomez</td>
-                            <td>Calle 12# 3ra</td>
-                            <td>Barrio la paz</td>
-                            <td>464181</td>
-                            <td>3137572888</td>
-                            <td>Popayan</td>
-                            <td>fotocopiasa100@gmail.com</td>
+                            <td>001</td>
+                            <td>Fecha: 16/01/2018 Realizo afiliacion en Comfacauca y nunca entregaron los carnets a
+                                tiempo, no dieron bono de regalo. Muy deficiente la informacion brindada por la asesora.
+                            </td>
+
                         </tr>
                         <tr>
-                            <td>Andrea Quiriao</td>
-                            <td>Calle 7# 3ra</td>
-                            <td>Barrio Esmeralda</td>
-                            <td>464181</td>
-                            <td>3215875631</td>
-                            <td>Popayan</td>
-                            <td>andreaquiriao89@gmail.com</td>
+                            <td>002</td>
+                            <td>Fecha: 19/01/2018 Cita con la Dra Sandra Nayibi en el HSLV, la dra no realiza una
+                                correcta atencion, solo aplica gotas y despacha a la paciente. La niña presenta malestar
+                                en sus ojos y requiere solucion inmediata. RTA: Se agenda cita con otro especialista.
+                            </td>
+
+
                         </tr>
-                       
-                       
+                        <tr>
+                            <td>003</td>
+                            <td>Fecha: 22/01/2018 Manifiesta inconformidad por que el Dr Gerardo Paredes, no entrega
+                                copia de la HC, siendo esta solicitada por el usuario. El servicio es deficiente.</td>
+
+
+                        </tr>
+
+
                     </tbody>
                 </table>
-
-                <div style="display: flex; margin-left: 39%; margin-top: 50px; overflow: hidden">
-
-                    <!-- <div style="display: flex; margin-left: 55%;">
-                        <h1 id="name" style="margin-left: 0px; font-size: 20px; color: #d79d13; width: 100%; height: 28px; overflow: hidden;">Jua</h1>
-                    </div> -->
-                </div>
-
-
-
-                <!-- <div class="cardsInversion" id="product-list">
-
-
-                </div> -->
 
                 <div class="right">
                     <div class="top">
@@ -282,7 +269,11 @@
 
     </div>
 
-    <!-- <script>
+    <script>
+
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
 
         const ImgComercios = document.getElementById("ImgComercio");
 
@@ -302,14 +293,9 @@
             reader.readAsDataURL(file);
 
         })
-    </script> -->
+    </script>
 
     <script>
-
-        $(document).ready(function () {
-            $('#table_id').DataTable();
-        });
-
 
         function membreNavideña() {
 
@@ -368,8 +354,6 @@
     <script src="./assets/js/logica/events/agregarComercioEvents.js"></script>
 
     <script src="./assets/js/Logica/utils/HttpsListarCatagorias.js"></script> -->
-
-    <!-- <script src="./Logica/GetUsuarios/HttpsGetUsuarios.js"></script> -->
 
 </body>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Protegemos C.G.U | Afiliar un Usuario</title>
+    <title>Grupo Protegemos C.G.U | Afiliar un Aliado</title>
     <!--Material Icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <!--STYLESHEET-->
@@ -46,7 +46,6 @@
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
 
-
 </head>
 
 <body class="cuerpo">
@@ -65,81 +64,6 @@
                             close </span>
                     </div>
                 </div>
-
-                <div class="sidebar">
-                    <br>
-                    <a href="sedes.html"  ><span class="material-icons-sharp">
-                            meeting_room</span>
-                        <h3>Sedes</h3>
-                    </a>
-
-                    <a href="inventarios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Inventarios</h3>
-                    </a>
-
-                    <a href="especialidades.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Especialidades</h3>
-                    </a>
-
-                    <a href="tarifas.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Tarifas</h3>
-                    </a>
-
-                    <a href="municipios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Municipios</h3>
-                    </a>
-
-                    <a href="afiliarUsuario.html" ><span class="material-icons-sharp">
-                            person_3</span>
-                        <h3>Afiliar Aliado</h3>
-                    </a>
-
-                    <a href="afiliarPersonal.html"><span class="material-icons-sharp">
-                            people</span>
-                        <h3>Afiliar Personal</h3>
-                    </a>
-
-                    <a href="afiliarMedico.html"><span class="material-icons-sharp">
-                            medication_liquid</span>
-                        <h3>Afiliar Médico</h3>
-                    </a>
-
-                    <a href="listarUsuarios.html" class="active" ><span class="material-icons-sharp">
-                            people</span>
-                        <h3>Ver Usuarios</h3>
-                    </a>
-
-                    <a href="convenios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Convenios</h3>
-                    </a>
-
-                    <a href="serviciosAdicionales.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Servicios Adicionales</h3>
-                    </a>
-
-                    <a href="tarifarios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Tarifarios</h3>
-                    </a>
-
-                    <a href="Preparaciones.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Preparaciones</h3>
-                    </a>
-
-
-                    <a href="index.html"><span class="material-icons-sharp">
-                            logout</span>
-                        <h3>Logout</h3>
-                    </a>
-                </div>
-
 
             </aside>
 
@@ -205,57 +129,76 @@
                     </nav>
                 </div>
 
+                <div style="display: flex; margin-left: 45%; overflow: hidden;">
+                    <br>
+                    <h1 id="cuentaM" style="color: #2a774d;">Consulta</h1>
+                    <br>
+                </div>
 
+                <section class="form-register">
+                    <h4>Buscar</h4>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 5%; width: 50%;">
+                            <b>Busqueda por:</b>
+                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                                    <option>-Seleccione-</option>
+                                    <option>N° Contrato</option>
+                                    <option>N° Factura</option>
+                                    <option>N° NIT</option>
+                                    <option>N° Telefono</option>
+                                    <option>Municipio</option>
+
+    
+                            </select>
+                        </div>
+                        
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Busqueda con:</b>
+                            <input class="controls" type="number" name="nom" id="nomComercio" required>
+                        </div>
+
+
+
+                    </div>
+
+                    <button class="botons" type="button" id="agregarComercioNav">Buscar</button>
+                </section>
+                <br>
+                <br>
+                <!-- 
                 <table id="table_id" class="display">
                     <thead>
                         <tr>
-                            <th>Suscriptor</th>
-                            <th>Direccion</th>
-                            <th>Barrio</th>
-                            <th>Telefono</th>
-                            <th>Celular</th>
-                            <th>Ciudad</th>
-                            <th>Correo Electronico</th>
+                            <th>Id</th>
+                            <th>Categoria</th>
 
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Juan Camilo Gomez</td>
-                            <td>Calle 12# 3ra</td>
-                            <td>Barrio la paz</td>
-                            <td>464181</td>
-                            <td>3137572888</td>
-                            <td>Popayan</td>
-                            <td>fotocopiasa100@gmail.com</td>
+                            <td>001</td>
+                            <td>Equipos de Oficina</td>
+                       
+                            
                         </tr>
                         <tr>
-                            <td>Andrea Quiriao</td>
-                            <td>Calle 7# 3ra</td>
-                            <td>Barrio Esmeralda</td>
-                            <td>464181</td>
-                            <td>3215875631</td>
-                            <td>Popayan</td>
-                            <td>andreaquiriao89@gmail.com</td>
+                            <td>002</td>
+                            <td>Insumos de Oficina</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>EQUIPOS E INSUMOS CAMPAÑAS DE PROMOCION</td>
+                       
                         </tr>
                        
                        
                     </tbody>
-                </table>
+                </table> -->
 
-                <div style="display: flex; margin-left: 39%; margin-top: 50px; overflow: hidden">
-
-                    <!-- <div style="display: flex; margin-left: 55%;">
-                        <h1 id="name" style="margin-left: 0px; font-size: 20px; color: #d79d13; width: 100%; height: 28px; overflow: hidden;">Jua</h1>
-                    </div> -->
-                </div>
-
-
-
-                <!-- <div class="cardsInversion" id="product-list">
-
-
-                </div> -->
 
                 <div class="right">
                     <div class="top">
@@ -282,7 +225,11 @@
 
     </div>
 
-    <!-- <script>
+    <script>
+
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
 
         const ImgComercios = document.getElementById("ImgComercio");
 
@@ -302,36 +249,31 @@
             reader.readAsDataURL(file);
 
         })
-    </script> -->
+    </script>
 
     <script>
 
-        $(document).ready(function () {
-            $('#table_id').DataTable();
-        });
+        function inventarioPapeleria() {
 
+            window.location.href = "inventarios.html"
 
-        function membreNavideña() {
-
-            // window.location.href = "preventa.html"
-
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'server under maintenance',
-            })
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: 'Oops...',
+            //     text: 'server under maintenance',
+            // })
 
         }
 
-        function membreSanta() {
+        function inventarioGeneral() {
 
-            // window.location.href = "preventa.html"
+            window.location.href = "inventariosGeneral.html"
 
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'server under maintenance',
-            })
+            // Swal.fire({
+            //     icon: 'error',
+            //     title: 'Oops...',
+            //     text: 'server under maintenance',
+            // })
 
         }
 
@@ -368,8 +310,6 @@
     <script src="./assets/js/logica/events/agregarComercioEvents.js"></script>
 
     <script src="./assets/js/Logica/utils/HttpsListarCatagorias.js"></script> -->
-
-    <!-- <script src="./Logica/GetUsuarios/HttpsGetUsuarios.js"></script> -->
 
 </body>
 
