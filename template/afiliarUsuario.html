@@ -204,12 +204,54 @@
                     </nav>
                 </div>
 
-                <div style="display: flex; margin-left: 39%; margin-top: 50px; overflow: hidden">
+                <section class="form-register">
+                    <h4>Contrato</h4>
 
-                    <!-- <div style="display: flex; margin-left: 55%;">
-                        <h1 id="name" style="margin-left: 0px; font-size: 20px; color: #d79d13; width: 100%; height: 28px; overflow: hidden;">Jua</h1>
-                    </div> -->
-                </div>
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 31%;">
+                            <b>Codigo</b>
+                            <input class="controls" type="number" name="nom" id="codigoContrato" required>
+                        </div>
+                        
+
+
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Fecha Expedición</b>
+                            <input class="controls" type="date" name="nom" id="fechaExpeContrato" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Fecha Vencimiento</b>
+                            <input class="controls" type="date" name="nom" id="fechaVenContrato" required>
+                        </div>
+                        
+
+
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Codigo EC</b>
+                            <input class="controls" type="text" name="nom" id="codEcContrato" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Codigo RF</b>
+                            <input class="controls" type="text" name="nom" id="codRfContrato" required>
+                        </div>
+                        
+
+
+                    </div>
+
+                </section>
+
                 <section class="form-register">
                     <h4>Afiliar Aliado</h4>
 
@@ -217,7 +259,23 @@
 
                         <div style="display: block; margin-left: 29%;">
                             <b>Código</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
+                            <input class="controls" type="text" name="nom" id="codUserAfiliado" required>
+                        </div>
+
+
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 6%;">
+                            <b>Nombre</b>
+                            <input class="controls" type="text" name="nom" id="nomUserAfiliado" required>
+
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Apellido</b>
+                            <input class="controls" type="text" name="nom" id="apeUserAfiliado" required>
                         </div>
 
 
@@ -226,56 +284,101 @@
                     <div style="display: flex;">
 
                         <div style="display: block; margin-left: 2%;">
-                            <b>Email</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
-
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Usuario</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
-                        </div>
-
-
-                    </div>
-
-                    <div style="display: flex;">
-
-                        <div style="display: block; margin-left: 2%;">
-                            <b>Password</b>
-                            <input class="controls" type="password" name="nom" id="nomComercio" required>
-
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Confirmar Password</b>
-                            <input class="controls" type="password" name="nom" id="nomComercio" required>
-                        </div>
-
-
-                    </div>
-
-                    <div style="display: flex;">
-
-                        <div style="display: block; margin-left: 40%;">
-
-                            <b>Activo</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
+                            <b>Municipio</b>
+                            <select class="controls" id="selectMunicipioAfiliado" name="selectCategorias">
                                 <option>-Seleccione-</option>
-                                <option>Si</option>
-                                <option>No</option>
+                                <option>Popayan</option>
+                               
 
                             </select>
 
                         </div>
 
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Barrio</b>
+                            <select class="controls" id="selectBarrioAfiliado" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Modelo</option>
+                                <option>Loma Linda</option>
+                                <option>Prados del Norte</option>
+                                <option>La Cabaña</option>
+                                <option>Santa Clara</option>
+                                <option>Casas Fiscales</option>
+                                <option>Nueva Granada</option>
+                                <option>Macharanga</option>
+                                <option>La Playa</option>
+
+                            </select>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Dirección</b>
+                            <input class="controls" type="text" name="nom" id="direUserAfiliado" required>
+                        </div>
+
+
                     </div>
 
-                    <button class="botons" type="button" id="agregarComercioNav">Guardar</button>
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Telefono</b>
+                            <input class="controls" type="number" name="nom" id="telUserAfiliado" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Celular</b>
+                            <input class="controls" type="number" name="nom" id="celUserAfiliado" required>
+                        </div>
+
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 2%;">
+                            <b>Tipo Documento</b>
+                            <select class="controls" id="tipDocuUserAfiliado" name="selectCategorias">
+                                <option>-Seleccione-</option>
+                                <option>Cedula de Ciudadania</option>
+                                <option>Tarjeta de Identidad</option>
+                                <option>Pasaporte</option>
+                               
+
+                            </select>
+
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>N° Documento</b>
+                            <input class="controls" type="number" name="nom" id="numDocuUserAfiliado" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 5%;">
+                            <b>Fecha de Expedición</b>
+                            <input class="controls" type="date" name="nom" id="fechaExpeUserAfiliado" required>
+                        </div>
+                        
+                    </div>
+
+                    <div style="display: flex;">
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>Parentezco</b>
+                            <input class="controls" type="text" name="nom" id="parenUserAfiliado" required>
+                        </div>
+
+                        <div style="display: block; margin-left: 10%;">
+                            <b>N° Documento Parentezco</b>
+                            <input class="controls" type="text" name="nom" id="docParenUserAfiliado" required>
+                        </div>
+
+                    </div>
+
+                    <button class="botons" type="button" id="guardarNuevoContrato">Guardar</button>
                 </section>
 <br>
 <br>
-                <table id="table_id" class="display">
+                <!-- <table id="table_id" class="display">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -311,7 +414,7 @@
 
 
                     </tbody>
-                </table>
+                </table> -->
 
                 <div class="right">
                     <div class="top">
@@ -344,24 +447,24 @@
             $('#table_id').DataTable();
         });
 
-        const ImgComercios = document.getElementById("ImgComercio");
+        // const ImgComercios = document.getElementById("ImgComercio");
 
-        ImgComercios.addEventListener("change", () => {
+        // ImgComercios.addEventListener("change", () => {
 
-            const file = ImgComercios.files[0];
-            const reader = new FileReader();
+        //     const file = ImgComercios.files[0];
+        //     const reader = new FileReader();
 
-            reader.addEventListener("load", () => {
+        //     reader.addEventListener("load", () => {
 
-                const comoseria = reader.result
-                console.log(comoseria);
-                localStorage.setItem("imagenBaseNavideña", comoseria)
+        //         const comoseria = reader.result
+        //         console.log(comoseria);
+        //         localStorage.setItem("imagenBaseNavideña", comoseria)
 
-            });
+        //     });
 
-            reader.readAsDataURL(file);
+        //     reader.readAsDataURL(file);
 
-        })
+        // })
     </script>
 
     <script>
@@ -406,23 +509,15 @@
 
     </script>
 
-    <!-- Fondo Particles-->
-    <!-- <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/orders.js"></script>
-    <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/particles.min.js"></script>-->
+    <!-- rutas-->
 
-    <!-- <script src="./assets/js/logica/utils/HttpsVerMembresias.js"></script> -->
+    <script src="Logica/Routes/routes.js"></script>
+    
+   <script src="Logica/GuardarContrato/HttpsGuardarContrato.js"></script>
+   <script src="Logica/GuardarContrato/GuardarContratoBussiness.js"></script>
+   <script src="Logica/GuardarContrato/GuardarContratoController.js"></script>
+   <script src="Logica/GuardarContrato/GuardarContratoEvents.js"></script>
 
-    <!-- <script src="./assets/js/logica/router/router.js"></script>
-
-
-    <script src="./assets/js/logica/utils/HttpsAgregarComercio.js"></script>
-    <script src="./assets/js/logica/business/agregarComercioBussiness.js"></script>
-    <script src="./assets/js/logica/controller/agregarComercioController.js"></script>
-    <script src="./assets/js/logica/events/agregarComercioEvents.js"></script>
-
-    <script src="./assets/js/Logica/utils/HttpsListarCatagorias.js"></script> -->
 
 </body>
 

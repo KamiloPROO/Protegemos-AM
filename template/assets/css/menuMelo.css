@@ -1,0 +1,31 @@
+/* .menuMelo{
+
+border: 2px solid green;
+width: 50%;
+
+
+} */
+
+.iconosMenu{
+    padding: 1%;
+    color: #2d734d;
+    border: 2px solid green;
+    width: 10%;
+}
+
+.iconosMenuActivo{
+    padding: 1%;
+    color: #371a66;
+    border: 2px solid #371a66;
+    width: 10%;
+    
+    
+}
+
+
+.iconosMenu:hover {
+
+    color: #371a66;
+    border: 2px solid #371a66;
+
+}

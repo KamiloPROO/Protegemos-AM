@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/respoDash.css">
     <link rel="stylesheet" href="./assets/css/formulario.css">
     <link rel="stylesheet" href="./assets/css/grilla.css">
+    <link rel="stylesheet" href="./assets/css/menuMelo.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -46,6 +47,7 @@
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>
 
+
 </head>
 
 <body class="cuerpo">
@@ -67,69 +69,44 @@
 
                 <div class="sidebar">
                     <br>
-                    <a href="sedes.html"  ><span class="material-icons-sharp">
-                            meeting_room</span>
-                        <h3>Sedes</h3>
+                    <a href="reportes.html"><span class="material-icons-sharp">
+                            work</span>
+                        <h3>Suscripciones/Cartera</h3>
                     </a>
 
-                    <a href="inventarios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Inventarios</h3>
+                    <a href="cartFinanzas.html"><span class="material-icons-sharp">
+                            work</span>
+                        <h3>Cartera X Finanzas</h3>
+                    </a>
+
+                    <a href="controlTarjetas.html" class="active"><span class="material-icons-sharp">
+                            work</span>
+                        <h3>Control Tarjetas</h3>
+                    </a>
+
+                    <a href="cartVigente.html"><span class="material-icons-sharp">
+                            work</span>
+                        <h3>Cartera Vigente</h3>
+                    </a>
+
+                    <a href="contInconvenientes.html"><span class="material-icons-sharp">
+                            work</span>
+                        <h3>Contratos Incovenientes</h3>
                     </a>
 
                     <a href="especialidades.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Especialidades</h3>
+                            work</span>
+                        <h3>Deterioro de Cartera</h3>
                     </a>
 
                     <a href="tarifas.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Tarifas</h3>
+                            work</span>
+                        <h3>Historico Cartera</h3>
                     </a>
 
                     <a href="municipios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Municipios</h3>
-                    </a>
-
-                    <a href="afiliarUsuario.html" ><span class="material-icons-sharp">
-                            person_3</span>
-                        <h3>Afiliar Aliado</h3>
-                    </a>
-
-                    <a href="afiliarPersonal.html"><span class="material-icons-sharp">
-                            people</span>
-                        <h3>Afiliar Personal</h3>
-                    </a>
-
-                    <a href="afiliarMedico.html"><span class="material-icons-sharp">
-                            medication_liquid</span>
-                        <h3>Afiliar Médico</h3>
-                    </a>
-
-                    <a href="listarUsuarios.html"><span class="material-icons-sharp">
-                            people</span>
-                        <h3>Ver Usuarios</h3>
-                    </a>
-
-                    <a href="convenios.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Convenios</h3>
-                    </a>
-
-                    <a href="serviciosAdicionales.html"  ><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Servicios Adicionales</h3>
-                    </a>
-
-                    <a href="tarifarios.html" class="active" ><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Tarifarios</h3>
-                    </a>
-
-                    <a href="Preparaciones.html"><span class="material-icons-sharp">
-                            local_atm</span>
-                        <h3>Preparaciones</h3>
+                            work</span>
+                        <h3>Prospectos por Asesor</h3>
                     </a>
 
 
@@ -138,6 +115,7 @@
                         <h3>Logout</h3>
                     </a>
                 </div>
+
 
             </aside>
 
@@ -202,85 +180,52 @@
 
                     </nav>
                 </div>
+
+                <div class="menuMelo">
+
+                    <a href="Dash.html" class="iconosMenuActivo"><span class="material-icons-sharp">
+                            work</span>
+                        <h3 class="letrasNav">Cartera</h3>
+                    </a>
+
+                    <a href="Dash.html" class="iconosMenu"><span class="material-icons-sharp">
+                            payments</span>
+                        <h3 class="letrasNav">Tesoreria</h3>
+                    </a>
+
+                    <a href="Dash.html" class="iconosMenu"><span class="material-icons-sharp">
+                            inventory</span>
+                        <h3 class="letrasNav">Papeleria</h3>
+                    </a>
+                    <a href="Dash.html" class="iconosMenu"><span class="material-icons-sharp">
+                            badge</span>
+                        <h3 class="letrasNav">Afiliaciones</h3>
+                    </a>
+                    <a href="Dash.html" class="iconosMenu"><span class="material-icons-sharp">
+                            medical_information
+                        </span>
+                        <h3 class="letrasNav">Citas</h3>
+                    </a>
+
+                </div>
+
                 <section class="form-register">
-                    <h4>Crear Tarifarios</h4>
 
-                    <div style="display: flex;">
+                    <h4>Reporte - Control Tarjetas</h4>
 
-                        <div style="display: block; margin-left: 29%;">
-                            <b>Nombre</b>
-                            <input class="controls" type="text" name="nom" id="nomComercio" required>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <b>Descripción</b>
-                        <textarea class="controls" type="text" name="nom" id="nomComercio" required></textarea>
-                    </div>
-
-                    <div style="display: flex;">
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Tipo</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                                <option>Escuela de Conducción</option>
-                                <option>Gimnasios</option>
-                                <option>Escuela de Baile</option>
-                                <option>Universidades</option>
-
-                            </select>
-                        </div>
-
-                        <div style="display: block; margin-left: 8%;">
-                            <b>Dirección</b>
-                            <input class="controls" type="number" name="nom" id="nomComercio" required>
-                        </div>
-                    </div>
-
-                    <div style="display: flex;">
-
-                        <div style="display: block; margin-left: 2%;">
-                            <b>Telefono</b>
-                            <input class="controls" type="number" name="nom" id="nomComercio" required>
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Valor Particular</b>
-                            <input class="controls" type="number" name="nom" id="nomComercio" required>
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Valor Protegemos</b>
-                            <input class="controls" type="number" name="nom" id="nomComercio" required>
-                        </div>
-
-                    </div>
-
-                    <div style="display: block; margin-left: 40%; width: 20%; " >
-                        <b>Activo</b>
-                        <select class="controls" id="selectCategorias" name="selectCategorias">
-                            <option>-Seleccione-</option>
-                            <option>Si</option>
-                            <option>No</option>
-
-                        </select>
-                    </div>
-
-                    <button class="botons" type="button" id="agregarComercioNav">Agregar Sede</button>
+                    <button class="botons" type="button" id="agregarComercioNav" style="margin-left: 1%;">Generar
+                        XLS</button>
                 </section>
-                <br>
                 <br>
 
                 <table id="table_id" class="display">
                     <thead>
                         <tr>
-                            <th>Codigo</th>
-                            <th>Tipo</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Valor Particular $</th>
-                            <th>Valor Protegemos $</th>
+                            <th>Finanza</th>
+                            <th>N° Tarjetas Asignadas por Municipios</th>
+                            <th>#</th>
+                            <th>Valor Cartera Asiganda</th>
+                          
                             
 
                         </tr>
@@ -288,28 +233,25 @@
                     <tbody>
                         <tr>
                             <td>001</td>
-                            <td>CENTRO DE IMÁGENES PROTEGEMOS</td>
-                            <td>ECOGRAFIA DOPPLER TESTICULAR</td>
-                            <td>ECOGRAFIAS</td>
-                            <td>150.000</td>
-                            <td>110.000</td>
+                            <td>Almaguer</td>
+                            <td>1</td>
+                            <td>120.000</td>
+                         
                             
                         </tr>
                         <tr>
                             <td>002</td>
-                            <td>CENTRO DE IMÁGENES PROTEGEMOS</td>
-                            <td>ECOGRAFIA DOPPLER DE ARTERIAS RENALES</td>
-                            <td>ECOGRAFIAS</td>
-                            <td>680.000</td>
-                            <td>600.000</td>
+                            <td>Argelia</td>
+                            <td>1</td>
+                            <td>50.000</td>
+                          
                         </tr>
                         <tr>
                             <td>003</td>
-                            <td>CENTRO DE IMÁGENES PROTEGEMOS</td>
-                            <td>ECOGRAFIA DOPPLER VENOSO C/M</td>
-                            <td>ECOGRAFIAS</td>
-                            <td>150.000</td>
-                            <td>110.000</td>
+                            <td>Balboa</td>
+                            <td>2</td>
+                            <td>199.900</td>
+                         
                         </tr>
                        
                        
@@ -344,7 +286,7 @@
 
     <script>
 
-$(document).ready(function () {
+        $(document).ready(function () {
             $('#table_id').DataTable();
         });
 
