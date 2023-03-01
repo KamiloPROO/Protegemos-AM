@@ -69,52 +69,32 @@
 
                 <div class="sidebar">
                     <br>
-                    <a href="reportes.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Suscripciones/Cartera</h3>
+                    <a href="tesoreria.html"  ><span class="material-icons-sharp">
+                        payments</span>
+                        <h3>Consolidado Comisiones</h3>
                     </a>
 
-                    <a href="cartFinanzas.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Cartera X Finanzas</h3>
+                    <a href="nominaAC.html"  ><span class="material-icons-sharp">
+                        payments</span>
+                        <h3>NOMINA AC-RF</h3>
                     </a>
 
-                    <a href="controlTarjetas.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Control Tarjetas</h3>
+                    <a href="estadisRecaudo.html"><span class="material-icons-sharp">
+                        payments</span>
+                        <h3>Estadisticas recaudo x tipo de afiliación</h3>
                     </a>
 
-                    <a href="cartVigente.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Cartera Vigente</h3>
+                    <a href="efiAsesor.html" class="active" ><span class="material-icons-sharp">
+                        payments</span>
+                        <h3>Eficiencia Recaudo por Asesor</h3>
                     </a>
-
-                    <a href="contInconvenientes.html" class="active"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Contratos Incovenientes</h3>
-                    </a>
-
-                    <a href="deteCartera.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Deterioro de Cartera</h3>
-                    </a>
-
-                    <a href="hisCartera.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Historico Cartera</h3>
-                    </a>
-
-                    <a href="proAsesor.html"><span class="material-icons-sharp">
-                            work</span>
-                        <h3>Prospectos por Asesor</h3>
-                    </a>
-
 
                     <a href="index.html"><span class="material-icons-sharp">
                             logout</span>
                         <h3>Logout</h3>
                     </a>
                 </div>
+
 
             </aside>
 
@@ -182,12 +162,12 @@
 
                 <div class="menuMelo">
 
-                    <a href="reportes.html" class="iconosMenuActivo"><span class="material-icons-sharp">
+                    <a href="reportes.html" class="iconosMenu"><span class="material-icons-sharp">
                             work</span>
                         <h3 class="letrasNav">Cartera</h3>
                     </a>
 
-                    <a href="tesoreria.html" class="iconosMenu"><span class="material-icons-sharp">
+                    <a href="tesoreria.html" class="iconosMenuActivo"><span class="material-icons-sharp">
                             payments</span>
                         <h3 class="letrasNav">Tesoreria</h3>
                     </a>
@@ -201,7 +181,7 @@
                         <h3 class="letrasNav">Afiliaciones</h3>
                     </a>
                     <a href="reporCitas.html" class="iconosMenu"><span class="material-icons-sharp">
-                            medical_information
+                        medical_information
                         </span>
                         <h3 class="letrasNav">Citas</h3>
                     </a>
@@ -210,21 +190,15 @@
 
                 <section class="form-register">
 
-                    <h4>Contratos Incovenientes</h4>
+                    <h4>Informe de Eficiencia en la Cancelación de Contratos</h4>
 
                     <div style="display: flex;">
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Finanza</b>
-                            <input class="controls" type="number" name="nom" id="nomComercio" required>
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
+                        <div style="display: block; margin-left: 21%;">
                             <b>Desde</b>
                             <input class="controls" type="date" name="nom" id="nomComercio" required>
                         </div>
 
-                        <div style="display: block; margin-left: 10%;">
+                        <div style="display: block; margin-left: 5%;">
                             <b>Hasta</b>
                             <input class="controls" type="date" name="nom" id="nomComercio" required>
                         </div>
@@ -232,84 +206,11 @@
                     </div>
 
                     <div style="display: flex;">
+                        
+                            <button class="botons" type="button" id="agregarComercioNav" style="margin-left: 1%;">Ver en Pantalla</button>
 
-                        <div style="display: block; margin-left: 14%;">
-                            <b>Municipio:</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                                <option>Popayan</option>
-                                <option>Acevedo Huila</option>
-                                <option>Acuarelas del Bosque</option>
-                                <option>Almaguer</option>
-                                <option>Argelia</option>
-                                <option>Balboa</option>
-                                <option>Bolivar</option>
-
-                            </select>
-
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Barrio:</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                                <option>Acacias</option>
-                                <option>Alda Lucia</option>
-                                <option>Alameda</option>
-                                <option>Alcala</option>
-                                <option>Alfonzo Lopez</option>
-                                <option>Alicante 1</option>
-                                <option>Alicante 2</option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-                    <div style="display: flex;">
-
-                        <div style="display: block; margin-left: 14%;">
-                            <b>Plan:</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                                <option>EXEQUIAS</option>
-                                <option>PROTEGEMOS</option>
-                                <option>TARJETA GOLD PREFERENCIAL</option>
-                                <option>BIPERSONAL</option>
-                                <option>BIPERSONAL GOLD EXEQUIAS</option>
-                                <option>BIPERSONAL ADICIONAL</option>
-                                <option>BIPERSONAL GOLD ADICIONAL</option>
-
-                            </select>
-
-                        </div>
-
-                        <div style="display: block; margin-left: 10%;">
-                            <b>Convenio:</b>
-                            <select class="controls" id="selectCategorias" name="selectCategorias">
-                                <option>-Seleccione-</option>
-                                <option>LICORERA 2013</option>
-                                <option>DOCENTES</option>
-                                <option>ACUEDUCTO</option>
-                                <option>INPEC</option>
-                                <option>HOSPITAL SAN JOSE</option>
-                                <option>COLEGIO ULLOA</option>
-                                <option>UTEN EXEQUIAL</option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-                    <div style="display: flex;">
-
-                        <button class="botons" type="button" id="agregarComercioNav" style="margin-left: 1%;">Ver en
-                            Pantalla</button>
-
-                        <button class="botons" type="button" id="agregarComercioNav" style="margin-left: 1%;">Generar
-                            XLS</button>
+                            <button class="botons" type="button" id="agregarComercioNav" style="margin-left: 1%;">Generar XLS</button>
+                        
                     </div>
 
                 </section>
