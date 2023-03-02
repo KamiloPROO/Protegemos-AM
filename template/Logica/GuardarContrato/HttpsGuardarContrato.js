@@ -1,6 +1,5 @@
 function CallEndPointPostComercio(url, jsonArgs) {
 
-    
 
     $.ajax({
         type: "POST",
@@ -11,10 +10,22 @@ function CallEndPointPostComercio(url, jsonArgs) {
             console.log(data);
 
 
-           if (data != null) {
+           if (data != null ) {
 
-            location.replace("afiliarUsuario.html");
-            location.href ="afiliarUsuario.html";
+           
+            Swal.fire({
+                icon: 'success',
+                title: 'Accion Exitosa',
+                text: 'Registro creado correctamente',
+              }).then((result) => {
+
+                if(result.isConfirmed){
+                    // window.location.href = URL_API_BASE;
+                    location.replace("afiliarUsuario.html");
+                    location.href ="afiliarUsuario.html";  
+                }  
+                           
+              })
 
            }else{
 
@@ -23,6 +34,8 @@ function CallEndPointPostComercio(url, jsonArgs) {
                 title: 'Oops...',
                 text: 'Algo Salio Mal Intenta Nuevamente',
               })
+
+           
 
            }
  
