@@ -11,17 +11,21 @@ function CallEndPointPostComercio(url, jsonArgs) {
             console.log(data);
 
 
+           if (data != null) {
 
+            location.replace("afiliarUsuario.html");
+            location.href ="afiliarUsuario.html";
 
+           }else{
 
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo Salio Mal Intenta Nuevamente',
+              })
 
-
-
-
-
-
-
-            
+           }
+ 
         },
         error: function () {
             
