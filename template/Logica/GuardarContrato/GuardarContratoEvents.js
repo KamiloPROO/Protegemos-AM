@@ -194,3 +194,14 @@ btnNuevoContrato.addEventListener('click', () => {
 
 });
 
+
+const btnAfiliar = document.getElementById("afiliarNuevo");
+
+btnAfiliar.addEventListener('click', () => {
+
+
+    AgregarAfiliado();
+
+});
+afiliarNuevo
+

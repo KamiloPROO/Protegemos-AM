@@ -22,14 +22,30 @@ const listDatos = async () => {
 
     try {
 
-        const response = await fetch("https://excelsiortrader.app/api/TiposMembresia/ListarTiposMembresia");
-        const datos = await response.json();
+        // const response = await fetch("https://excelsiortrader.app/api/TiposMembresia/ListarTiposMembresia");
+        // const datos = await response.json();
 
-        console.log(datos);
+        // console.log(datos);
+
+        var listaData = [
+
+
+
+            {
+                Descripcion: "Melos",
+                Fee: "6",
+                Id: "46",
+                IdEstado: "45",
+                RangoInicial: "44",
+                RangoFinal: "43",
+                Rendimiento: "4"
+            }
+
+        ];
 
         let content = ``;
 
-        datos.forEach(element => {
+        listaData.forEach(element => {
 
             content += `
                 
@@ -41,17 +57,13 @@ const listDatos = async () => {
                      <td>${element.RangoInicial}</td>
                      <td>${element.RangoFinal}</td>
                      <td>${element.Rendimiento}</td>
+
                 </tr>
                 `
 
             tableBody.innerHTML = content;
 
         });
-
-
-
-
-
 
     } catch (ex) {
 
@@ -62,50 +74,6 @@ const listDatos = async () => {
 
 
 }
-
-
-// function listDatos() {
-
-//     $.ajax({
-//         type: "GET",
-//         url: "https://excelsiortrader.app/api/TiposMembresia/ListarTiposMembresia",
-//         data: "",
-//         success: function (data) {
-
-//             console.log(data);
-
-//             let content = ``;
-
-//             data.forEach(element => {
-
-//                 content += `
-
-//                 <tr>
-//                      <td>${element.Descripcion}</td>
-//                      <td>${element.Fee}</td>
-//                      <td>${element.Id}</td>
-//                      <td>${element.IdEstado}</td>
-//                      <td>${element.RangoInicial}</td>
-//                      <td>${element.RangoFinal}</td>
-//                      <td>${element.Rendimiento}</td>
-//                 </tr>
-//                 `
-
-//             tableBody.innerHTML = content;
-
-//             });
-
-
-
-//         },
-//         error: function () {
-//             alert("Ha ocurrido un error, por favor vuelva a intentarlo")
-//         }
-//     });
-
-
-// };
-
 
 window.addEventListener("load", async () => {
 

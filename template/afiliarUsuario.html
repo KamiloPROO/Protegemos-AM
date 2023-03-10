@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/respoDash.css">
     <link rel="stylesheet" href="./assets/css/formulario.css">
     <link rel="stylesheet" href="./assets/css/grilla.css">
+    <link rel="stylesheet" href="./assets/css/tablaGod.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconprotegemos.svg" />
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -65,21 +66,20 @@
                             close </span>
                     </div>
                 </div>
-
-                <<div class="sidebar">
+                <div class="sidebar">
                     <br>
-                    <a href="sedes.html"  ><span class="material-icons-sharp">
+                    <a href="sedes.html"><span class="material-icons-sharp">
                             meeting_room</span>
                         <h3>Sedes</h3>
                     </a>
 
-                    <a href="inventarios.html"  ><span class="material-icons-sharp">
+                    <a href="inventarios.html"><span class="material-icons-sharp">
                             inventory</span>
                         <h3>Inventarios</h3>
                     </a>
 
                     <a href="especialidades.html"><span class="material-icons-sharp">
-                        workspace_premium</span>
+                            workspace_premium</span>
                         <h3>Especialidades</h3>
                     </a>
 
@@ -93,7 +93,7 @@
                         <h3>Municipios</h3>
                     </a>
 
-                    <a href="afiliarUsuario.html" class="active" ><span class="material-icons-sharp">
+                    <a href="afiliarUsuario.html" class="active"><span class="material-icons-sharp">
                             person_3</span>
                         <h3>Afiliar Aliado</h3>
                     </a>
@@ -109,22 +109,22 @@
                     </a>
 
                     <a href="listarUsuarios.html"><span class="material-icons-sharp">
-                        reduce_capacity</span>
+                            reduce_capacity</span>
                         <h3>Ver Usuarios</h3>
                     </a>
 
                     <a href="convenios.html"><span class="material-icons-sharp">
-                        apartment</span>
+                            apartment</span>
                         <h3>Convenios</h3>
                     </a>
 
                     <a href="serviciosAdicionales.html"><span class="material-icons-sharp">
-                        settings_suggest</span>
+                            settings_suggest</span>
                         <h3>Servicios Adicionales</h3>
                     </a>
 
                     <a href="tarifarios.html"><span class="material-icons-sharp">
-                        published_with_changes</span>
+                            published_with_changes</span>
                         <h3>Tarifarios</h3>
                     </a>
 
@@ -213,7 +213,7 @@
                             <b>Codigo</b>
                             <input class="controls" type="text" name="nom" id="codigoContrato" required>
                         </div>
-                        
+
 
 
                     </div>
@@ -229,7 +229,7 @@
                             <b>Fecha Vencimiento</b>
                             <input class="controls" type="date" name="nom" id="fechaVenContrato" required>
                         </div>
-                        
+
 
 
                     </div>
@@ -245,7 +245,7 @@
                             <b>Codigo RF</b>
                             <input class="controls" type="text" name="nom" id="codRfContrato" required>
                         </div>
-                        
+
 
 
                     </div>
@@ -288,7 +288,7 @@
                             <select class="controls" id="selectMunicipioAfiliado" name="selectCategorias">
                                 <option>-Seleccione-</option>
                                 <option>Popayan</option>
-                               
+
 
                             </select>
 
@@ -342,7 +342,7 @@
                                 <option>Cedula de Ciudadania</option>
                                 <option>Tarjeta de Identidad</option>
                                 <option>Pasaporte</option>
-                               
+
 
                             </select>
 
@@ -357,7 +357,7 @@
                             <b>Fecha de Expedición</b>
                             <input class="controls" type="date" name="nom" id="fechaExpeUserAfiliado" required>
                         </div>
-                        
+
                     </div>
 
                     <div style="display: flex;">
@@ -374,47 +374,48 @@
 
                     </div>
 
+                    <button class="botons" type="button" id="afiliarNuevo">afiliar</button>
+                </section>
+                <br>
+
+                <div class="divTabla">
+
+                    <table id="table_id" class="display nowrap">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Id Municipio</th>
+                                <th>Id barrio</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
+                                <th>Celular</th>
+                                <th>Documento</th>
+                                <th>Fecha Expedicion</th>
+                                <th>Id documento</th>
+                                <th>Id parentesco</th>
+                                <th>documento padre</th>
+
+                            </tr>
+
+                        </thead>
+                        <tbody id="tableBody">
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+                <section class="form-register">
+
                     <button class="botons" type="button" id="guardarNuevoContrato">Guardar</button>
                 </section>
-<br>
-<br>
-                <!-- <table id="table_id" class="display">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre Completo</th>
-                            <th>Cargo</th>
-                            <th>Sede</th>
-
-
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>ANGELA FERNANDA GUZMAN</td>
-                            <td>CONTROL PAPELERIA</td>
-                            <td>POPAYAN</td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>DIANA VALENTINA GARCIA GARCIA</td>
-                            <td>CARTERA</td>
-                            <td>POPAYAN</td>
-
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>JOHAN FRANCISCO VILLAMARIN SOTOMAYOR</td>
-                            <td>DIGITACION</td>
-                            <td>POPAYAN</td>
-
-                        </tr>
-
-
-                    </tbody>
-                </table> -->
 
                 <div class="right">
                     <div class="top">
@@ -444,8 +445,31 @@
     <script>
 
         $(document).ready(function () {
-            $('#table_id').DataTable();
+            $('#afiliarNuevo').click(function () {
+
+                $("#codUserAfiliado").val('');
+                $("#nomUserAfiliado").val('');
+                $("#apeUserAfiliado").val('');
+                $("#direUserAfiliado").val('');
+                $("#telUserAfiliado").val('');
+                $("#celUserAfiliado").val('');
+                $("#numDocuUserAfiliado").val('');
+                $("#fechaExpeUserAfiliado").val('');
+                $("#docParenUserAfiliado").val('');
+
+
+                $("#parenUserAfiliado").val('');
+                $("#selectMunicipioAfiliado").val('-Seleccione-');
+                $("#tipDocuUserAfiliado").val('-Seleccione-');
+                $("#selectBarrioAfiliado").val('-Seleccione-');
+                
+            
+            });
         });
+
+        // $(document).ready(function () {
+        //     $('#table_id').DataTable();
+        // });
 
         // const ImgComercios = document.getElementById("ImgComercio");
 
@@ -512,11 +536,11 @@
     <!-- rutas-->
 
     <script src="Logica/Routes/routes.js"></script>
-    
-   <script src="Logica/GuardarContrato/HttpsGuardarContrato.js"></script>
-   <script src="Logica/GuardarContrato/GuardarContratoBussiness.js"></script>
-   <script src="Logica/GuardarContrato/GuardarContratoController.js"></script>
-   <script src="Logica/GuardarContrato/GuardarContratoEvents.js"></script>
+
+    <script src="Logica/GuardarContrato/HttpsGuardarContrato.js"></script>
+    <script src="Logica/GuardarContrato/GuardarContratoBussiness.js"></script>
+    <script src="Logica/GuardarContrato/GuardarContratoController.js"></script>
+    <script src="Logica/GuardarContrato/GuardarContratoEvents.js"></script>
 
 
 </body>
