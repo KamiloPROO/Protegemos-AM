@@ -199,8 +199,149 @@ const btnAfiliar = document.getElementById("afiliarNuevo");
 
 btnAfiliar.addEventListener('click', () => {
 
+    var tabla = document.getElementById('divTabla');
 
-    AgregarAfiliado();
+    
+
+    const codUser = document.getElementById("codUserAfiliado").value
+    const nomUser = document.getElementById("nomUserAfiliado").value
+    const apeUser = document.getElementById("apeUserAfiliado").value
+    const munUser = document.getElementById("selectMunicipioAfiliado").value
+    const barUser = document.getElementById("selectBarrioAfiliado").value
+    const direUser = document.getElementById("direUserAfiliado").value
+    const teUser = document.getElementById("telUserAfiliado").value
+    const celUser = document.getElementById("celUserAfiliado").value
+    const tipDocUser = document.getElementById("tipDocuUserAfiliado").value
+    const docUser = document.getElementById("numDocuUserAfiliado").value
+    const fechaExUser = document.getElementById("fechaExpeUserAfiliado").value
+    const parenUser = document.getElementById("parenUserAfiliado").value
+    const docParen = document.getElementById("docParenUserAfiliado").value
+
+    if (codUser === null || codUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un codigo de usuario',
+
+        })
+
+    }else if (nomUser === null || nomUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un nombre de usuario',
+
+        })
+
+    }else if (apeUser === null || apeUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un apellido de usuario',
+
+        })
+
+    }else if (munUser === null || munUser === "-Seleccione-") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un municipio de residencia de usuario',
+
+        })
+
+    }else if (barUser === null || barUser === "-Seleccione-") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un barrio de residencia de usuario',
+
+        })
+
+    }else if (direUser === null || direUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa una direccion de residencia de usuario',
+
+        })
+
+    }else if (teUser === null || teUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un numero de telefono de usuario',
+
+        })
+
+    }else if (celUser === null || celUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un numero de celular de usuario',
+
+        })
+
+    }else if (tipDocUser === null || tipDocUser === "-Seleccione-") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un tipo de identificacion de usuario',
+
+        })
+
+    }else if (docUser === null || docUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa tu numero de documento de usuario',
+
+        })
+
+    }else if (fechaExUser === null || fechaExUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa la fecha de expedición de tu documento de usuario',
+
+        })
+
+    }else if (parenUser === null || parenUser === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa un parentezco de usuario',
+
+        })
+
+    }else if (docParen === null || docParen === "") {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ingresa el numero de documento de tu parentezco de usuario',
+
+        })
+
+    }else {
+
+        tabla.style.display = 'block'
+        AgregarAfiliado();
+
+    }
+
+    
 
 });
 afiliarNuevo
