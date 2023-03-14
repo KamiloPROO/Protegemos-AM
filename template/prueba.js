@@ -39,7 +39,6 @@ document.querySelector("#list-datos").addEventListener("click", (e) => {
         document.querySelector("#parenUserAfiliado").value = selectedRow.children[11].textContent;
         document.querySelector("#docParenUserAfiliado").value = selectedRow.children[12].textContent;
 
-
     }
 
 });
