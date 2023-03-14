@@ -1,4 +1,4 @@
-var Afiliados = []
+let Afiliados = []
 
 function AgregarNuevoContrato() {
 
@@ -131,79 +131,162 @@ function AgregarAfiliado() {
 
     }
 
-    console.table(Afiliado);
+    
+    console.log(Afiliados);
     Afiliados.push(Afiliado);
   
-    initDataTable();
+    // initDataTable();
+
+    listar();
 
 }
 
 
-let dataTable;
-let dataTableInitialized = false;
+var listar = function(){
 
-const initDataTable = async () => {
+    var adentroDe = Afiliados[0]
+    console.log(JSON.stringify(adentroDe));
 
-    if (dataTableInitialized) {
-        dataTable.destroy();
-    }
+    var jfsonData = JSON.stringify(adentroDe);
 
-    await listDatos();
 
-    dataTable = $("#table_id").DataTable({
+        var table = $("#table_id").DataTable({
 
-      scrollX: true,
+            "destroy": true,
+            "data": jfsonData,
+            "columns": [
 
-    });
+                {"data":"CODIGO"},
+                {"":"NOMBRE"},
+                {"":"APELLIDO"},
+                {"":"ID_MUNICIPIO"},
+                {"":"ID_BARRIO"},
+                {"":"DIRECCION"},
+                {"":"TELEFONO"},
+                {"":"CELULAR"},
+                {"":"DOCUMENTO"},
+                {"":"FECHA_EXPEDICION"},
+                {"":"ID_TIPODOCUMENTO"},
+                {"":"ID_PARENTEZCO"},
+                {"":"DOCUMENTO_PADRE"},
+                {"defaultContent":"<button class='botonsEditar' type='button' id='editarDato'>Editar</button>"}
+        
+                // {"data":"CODIGO"},
+                // {"data":"NOMBRE"},
+                // {"data":"APELLIDO"},
+                // {"data":"ID_MUNICIPIO"},
+                // {"data":"ID_BARRIO"},
+                // {"data":"DIRECCION"},
+                // {"data":"TELEFONO"},
+                // {"data":"CELULAR"},
+                // {"data":"DOCUMENTO"},
+                // {"data":"FECHA_EXPEDICION"},
+                // {"data":"ID_TIPODOCUMENTO"},
+                // {"data":"ID_PARENTEZCO"},
+                // {"data":"DOCUMENTO_PADRE"},
+                // {"defaultContent":"<button class='botonsEditar' type='button' id='editarDato'>Editar</button>"}
+        
+            ]
+           });
+        
+           obtener_data_editar("#table_id tbody", table);
+
+}
+
+
+
+// let dataTable;
+// let dataTableInitialized = false;
+
+// const initDataTable = async () => {
+
+//     if (dataTableInitialized) {
+//         dataTable.destroy();
+//     }
+
+//     await listDatos();
+    // var adentroDe = Afiliados[0]
+    // console.log(JSON.stringify(adentroDe));
+
+    // var jfsonData = JSON.stringify(adentroDe);
+
+//     dataTable = $("#table_id").DataTable({
+
+//       scrollX: true,
+
+//     });
     
-    dataTableInitialized = true
+//     dataTableInitialized = true
+
+   
+//    obtener_data_editar("#table_id tbody", dataTable);
+
+// }
 
 
-}
+// const listDatos = async () => {
 
 
-const listDatos = async () => {
 
-    try {
 
-        let content = ``;
 
-        Afiliados.forEach(element => {
+    // try {
 
-            content += `
+    //     let content = ``;
+
+    //     Afiliados.forEach(element => {
+
+    //         content += `
                 
-                <tr>
+    //             <tr>
                     
-                     <td>${element.CODIGO}</td>
-                     <td>${element.NOMBRE}</td>
-                     <td>${element.APELLIDO}</td>
-                     <td>${element.ID_MUNICIPIO}</td>
-                     <td>${element.ID_BARRIO}</td>
-                     <td>${element.DIRECCION}</td>
-                     <td>${element.TELEFONO}</td>
-                     <td>${element.CELULAR}</td>
-                     <td>${element.DOCUMENTO}</td>
-                     <td>${element.FECHA_EXPEDICION}</td>
-                     <td>${element.ID_TIPODOCUMENTO}</td>
-                     <td>${element.ID_PARENTEZCO}</td>
-                     <td>${element.DOCUMENTO_PADRE}</td>
+    //                  <td>${element.CODIGO}</td>
+    //                  <td>${element.NOMBRE}</td>
+    //                  <td>${element.APELLIDO}</td>
+    //                  <td>${element.ID_MUNICIPIO}</td>
+    //                  <td>${element.ID_BARRIO}</td>
+    //                  <td>${element.DIRECCION}</td>
+    //                  <td>${element.TELEFONO}</td>
+    //                  <td>${element.CELULAR}</td>
+    //                  <td>${element.DOCUMENTO}</td>
+    //                  <td>${element.FECHA_EXPEDICION}</td>
+    //                  <td>${element.ID_TIPODOCUMENTO}</td>
+    //                  <td>${element.ID_PARENTEZCO}</td>
+    //                  <td>${element.DOCUMENTO_PADRE}</td>
+    //                  <td> 
+    //                  <button class="botonsEditar" type="button" id="editarDato">Editar</button>
+    //                  <hr>
+    //                  <button class="botonsEliminar" type="button" id="elimarDato">Eliminar</button>
+    //                  </td>  
+               
+    //                  </tr>
+    //             `
 
-                </tr>
-                `
+    //         tableBody.innerHTML = content;
 
-            tableBody.innerHTML = content;
+    //     });
 
-        });
+    // } catch (ex) {
 
-    } catch (ex) {
+    //     alert(ex);
 
-        alert(ex);
-
-    }
+    // }
 
 
 
+// }
+
+
+
+
+
+var obtener_data_editar = function(tbody, table) {
+    $(tbody).on("click", "button.botonsEditar", function(){
+        var data = table.row( $(this).parents("tr") ).data();
+        console.log(data);
+    })
 }
+
 
 // window.addEventListener("load", async () => {
 

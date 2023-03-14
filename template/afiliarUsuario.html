@@ -21,6 +21,11 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -252,7 +257,7 @@
 
                 </section>
 
-                <section class="form-register">
+                <form action="" id="form-action" class="form-register" style="margin-left: 12%;">
                     <h4>Afiliar Aliado</h4>
 
                     <div style="display: flex;">
@@ -375,12 +380,61 @@
                     </div>
 
                     <button class="botons" type="button" id="afiliarNuevo">afiliar</button>
-                </section>
+                </form>
                 <br>
 
                 <div class="divTabla" id="divTabla">
 
-                    <table id="table_id" class="display nowrap">
+                    <table class="table table-striped table-dark">
+
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Id Municipio</th>
+                                <th>Id barrio</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
+                                <th>Celular</th>
+                                <th>Documento</th>
+                                <th>Fecha Expedicion</th>
+                                <th>Id documento</th>
+                                <th>Id parentesco</th>
+                                <th>documento padre</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list-datos">
+
+                            <!-- <tr>
+
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>Codigo</td>
+                                <td>
+                                    <a href="#" class="botonsEditar edit">Edit</a>
+                                    <a href="#" class="botonsEliminar delete">delete</a>
+
+                                </td>
+
+                            </tr> -->
+
+
+                        </tbody>
+                    </table>
+
+                    <!-- <table id="table_id" class="display nowrap">
 
                         <thead>
 
@@ -399,6 +453,7 @@
                                 <th>Id documento</th>
                                 <th>Id parentesco</th>
                                 <th>documento padre</th>
+                                <th>Opciones</th>
 
                             </tr>
 
@@ -408,7 +463,7 @@
 
                         </tbody>
 
-                    </table>
+                    </table> -->
                 </div>
 
 
@@ -444,7 +499,7 @@
 
     <script>
 
-        
+
 
         $(document).ready(function () {
             $('#afiliarNuevo').click(function () {
@@ -465,33 +520,12 @@
                 $("#tipDocuUserAfiliado").val('-Seleccione-');
                 $("#selectBarrioAfiliado").val('-Seleccione-');
 
-              
+
 
             });
         });
 
-        // $(document).ready(function () {
-        //     $('#table_id').DataTable();
-        // });
 
-        // const ImgComercios = document.getElementById("ImgComercio");
-
-        // ImgComercios.addEventListener("change", () => {
-
-        //     const file = ImgComercios.files[0];
-        //     const reader = new FileReader();
-
-        //     reader.addEventListener("load", () => {
-
-        //         const comoseria = reader.result
-        //         console.log(comoseria);
-        //         localStorage.setItem("imagenBaseNavideña", comoseria)
-
-        //     });
-
-        //     reader.readAsDataURL(file);
-
-        // })
     </script>
 
     <script>
@@ -544,6 +578,7 @@
     <script src="Logica/GuardarContrato/GuardarContratoBussiness.js"></script>
     <script src="Logica/GuardarContrato/GuardarContratoController.js"></script>
     <script src="Logica/GuardarContrato/GuardarContratoEvents.js"></script>
+    <script src="prueba.js"></script>
 
 
 </body>

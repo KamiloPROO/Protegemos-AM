@@ -2,6 +2,32 @@
 
     width: 100%;
     overflow: hidden;
-    display: none;
+    overflow-x: scroll;
+    
+    /* display: none; */
 
 }
+
+.botonsEditar {
+    
+    background: #e7bf3c;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .botonsEliminar {
+    
+    background: #810923;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 10px;
+  }

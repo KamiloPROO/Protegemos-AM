@@ -201,8 +201,6 @@ btnAfiliar.addEventListener('click', () => {
 
     var tabla = document.getElementById('divTabla');
 
-    
-
     const codUser = document.getElementById("codUserAfiliado").value
     const nomUser = document.getElementById("nomUserAfiliado").value
     const apeUser = document.getElementById("apeUserAfiliado").value
